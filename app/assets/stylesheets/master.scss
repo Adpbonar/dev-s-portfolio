@@ -912,6 +912,9 @@ opacity: .7;
 padding-top: 2px;
 padding-bottom: 2px;
 }
+.menu-item:hover, .menu-item:focus {
+  color: black;
+}
 .about-nav {
   background-color:rgba(130, 111, 139, 0.3);
   border: 1px solid rgb(5, 5, 5);
