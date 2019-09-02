@@ -34,7 +34,6 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
      flash[:success] = "Article was updated"
      redirect_to article_path(@article)
-     @article.schedule_to_publish
     else
      flash[:success] = "Article was not updated"
      render 'edit'

@@ -8,4 +8,11 @@ class StaticPagesController < ApplicationController
 
   def resume
   end
+
+  def more_code
+  end
+
+  def more_projects
+  end
+
 end
