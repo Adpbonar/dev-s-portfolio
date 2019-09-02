@@ -948,7 +948,7 @@ article p {
 }
   .about-photo {
     text-align: center;
-    height: 406px !important;
+    width: 54%;
   }
 
 .more-code {
@@ -967,18 +967,13 @@ article p {
   background: image_url('annie-spratt-yorwIcw6IR0-unsplash.jpg'); 
   box-shadow: 2px 2px rgb(207, 205, 205);
   border-radius: 5px;
+  width: 50%;
 }
 .box img {
   height: 400px !important;
 }
 .about-formatter {
-  display: inline !important;
+  width: 100%;
   margin: 0;
 }
-.col-sm-6 {
-  padding: 0 !important;
-}
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
+
