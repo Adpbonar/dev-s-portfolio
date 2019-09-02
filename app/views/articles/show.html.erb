@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
+<br />
+<br />
+ <% if @article.published || current_user && current_user == @article.user %>
+ <% unless @article.published %>
+    <h2 style="color: red;">DRAFT</h2>
+  <% end %>  
+  <h2 class="post-title"><%= @article.title %></h2>
+  <div class="well col-xs-8 col-xs-offset-2">
+  <br />
+  <center><p class="date-text"><%= @article.scheduled_for.strftime("%B %d, %Y") %></center>
+  <hr>
+  <div class="post"><%= @article.post.html_safe %></div>
+  <br />
+  <% if current_user && current_user == @article.user %>
+    <%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %> |
+    <%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
+    <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?"}, class: "btn btn-xs btn-danger" %>
+    <br />
+    <br />
+    <br />
+  <% end %>
+  <div align="left"><%= link_to 'Archives', all_articles_path %>
+  </div>
+<% end %>
+<br class="clear" />
+<br />
+<br />

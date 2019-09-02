@@ -1,0 +1,33 @@
+ <div class="panel-body">
+      
+      <%# <%= render 'shared/errors', obj: @article %>
+     </div>
+<h1>Create an Article</h1>
+ <div class="col-10 offset-1">
+<%= simple_form_for(@article) do |f| %>
+ <div align="right">
+  <%= f.input :published, as: :radio_buttons, label: 'Publish Now?' %>
+  <br/>
+  <center><%= f.input :title, class: 'form' %></center><br class="clear" /><br />
+  <br />
+  <div align="center">
+   <%= f.text_area :snippet, :class => "tinymce", placeholder: "Write a snippet.", :rows => 10, :cols => 120 %> 
+   <br class="clear" />
+  <%= f.text_area :post, :class => "tinymce", placeholder: "Write a post.", :rows => 40, :cols => 120 %> 
+  <br />
+ <%= f.submit %>
+ </p>
+<% end %>
+</div>
+</div>
+<br class="clear" />
+<br />
+<br />
+<br />
+<br />
+<br />
+<%# <script type="text/javascript">
+  tinyMCE.init({
+    selector: 'textarea.table-editor'
+  });
+</script> %>

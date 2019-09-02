@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :articles
+  devise_for :users
+  root 'static_pages#index'
+  resources :articles
+  get 'resume', to: 'static_pages#resume'
+  get 'about', to: 'static_pages#about'
 end
+
