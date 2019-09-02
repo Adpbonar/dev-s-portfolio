@@ -963,7 +963,7 @@ article p {
   font-family: 'Dawning of a New Day', cursive;
   font-size: 1.5em;
   font-weight:bold;
-  color: #ffd2d2;
+  color: navy;
   background: image_url('annie-spratt-yorwIcw6IR0-unsplash.jpg') center center; 
   background-size: cover;
   box-shadow: 1px 2px rgb(207, 205, 205);
@@ -971,9 +971,6 @@ article p {
   -webkit: 1px 2px rgb(207, 205, 205);
   border-radius: 2px;
   width: 50%;
-  -webkit-text-fill-color: #ffd2d2; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: navy;
 }
 .box img {
   height: 400px !important;
