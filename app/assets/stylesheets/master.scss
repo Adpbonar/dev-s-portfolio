@@ -947,6 +947,7 @@ article p {
 }
   .about-photo {
     text-align: center;
+    display:inline;
   }
 
 .more-code {
@@ -964,7 +965,7 @@ article p {
   color: #ffd2d2;
   background: image_url('annie-spratt-yorwIcw6IR0-unsplash.jpg'); 
   box-shadow: 2px 2px rgb(207, 205, 205);
-  width: 40%;
+  display: inline;
 }
 .box img {
   height: 400px !important;
