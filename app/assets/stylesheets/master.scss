@@ -388,12 +388,33 @@ li {
  display:inline !important;
 }
 
-.about-more a:hover, .more a:focus {
+.about-more a:hover, .about-more a:focus {
  color: navy !important;
  outline: none;
  text-decoration: none;
  border-bottom: 1px solid navy;
 } 
+.more a {
+  color: rgb(158, 121, 28) !important;
+  background: none;
+  text-align:center;
+  border-bottom: 1px solid rgb(158, 121, 28);
+  font-weight: bold;
+  padding: 4px;
+  font-size: 20px;
+  outline: none;
+  text-decoration: none;
+  display:inline !important;
+ }
+ 
+ .more a:hover, .more a:focus {
+  color: navy !important;
+  outline: none;
+  text-decoration: none;
+  border-bottom: 1px solid navy;
+ } 
+ 
+
 
 .first-click {
  padding-bottom: 1px;
@@ -956,7 +977,7 @@ article p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  display: line;
+  display: inline;
 }
 .more-code img {
   width: 100%;
