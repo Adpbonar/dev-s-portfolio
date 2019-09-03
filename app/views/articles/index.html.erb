@@ -10,10 +10,8 @@
                 <% end %>  
    <div class="well well-lg">
     <div class="article-title">
-    <p class="post-title"><%= link_to article.title, article_path(article) %></p>
-     <br />
-     <center><small class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y") %></small></center>
-     <br />
+    <center><p class="date-text"><%= @article.scheduled_for.strftime("%B %d, %Y") %></center>
+    <hr>
     </div>
     <div class="article-body">
      <p class="post"><%= article.snippet %>...</p>
