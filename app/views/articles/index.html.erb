@@ -1,24 +1,28 @@
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 <br />
+<br />
+<div class="page-content">
 <h1 align="center">Read My Articles</h1>
 <br />
-<% @articles.each do |article| %>
-  <div class="col-xs-8 col-xs-offset-2">
-    <h2 class="post-title"><%= article.title %></h2>
-    <center><p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y") %></center>
-    <% if article.published || current_user && current_user == article.user %>
-      <% unless article.published %>
-        <h5 style="color: red;">DRAFT</h5>
-    <% end %>  
-  </div>
-    <cener><div class="article-body">
-     <p class="post"><%= article.snippet %>...</p>
-     <br />
-     <p class="more"><%= link_to 'Read more', article_path(article) %></p>
-    </div></center>
-   </div>
-  </div>
-  <br />
-  <br />
-<% end %>
-<% end%>
+  <% @articles.each do |article| %>
+    <div class="col-xs-8 col-xs-offset-2">
+      <h2 class="post-title"><%= article.title %></h2>
+      <center><p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y") %></center>
+      <% if article.published || current_user && current_user == article.user %>
+        <% unless article.published %>
+          <h5 style="color: red;">DRAFT</h5>
+      <% end %>  
+    </div>
+      <cener><div class="article-body">
+      <p class="post"><%= article.snippet %>...</p>
+      <br />
+      <p class="more"><%= link_to 'Read more', article_path(article) %></p>
+      </div></center>
+    </div>
+    </div>
+    <br />
+    <br />
+  <% end %>
+  <% end%>
+</div>
+<br />

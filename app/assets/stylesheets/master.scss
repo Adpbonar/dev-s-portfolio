@@ -1,6 +1,11 @@
 @import "bootstrap";
 @import "font-awesome";
-
+body {
+  background: image_url('bernard-hermant-X-Bu9X6gok0-unsplash.jpg') center center !important; 
+  font-family: 'PT Sans', sans-serif;
+  overflow-x: hidden;
+  margin: 0 !important;
+}
 .article-actions {
  border-top: 1px solid #eaeaea;
  padding-top: 5px;
@@ -108,11 +113,6 @@ td {
 .logo:hover, .logo:focus {
   color: rgb(165, 162, 162);
   text-decoration: none !important;
-}
-body {
-  font-family: 'PT Sans', sans-serif;
-  overflow-x: hidden;
-  margin: 0 !important;
 }
 .about h1 {
  color: #EBEFF1 !important;
@@ -333,6 +333,7 @@ li {
  letter-spacing: 3px;
  float: center;
  border-radius: 0 !important;
+ border: 1px solid white;
 }
 .bio-box {
 -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -790,7 +791,7 @@ li {
  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
    -webkit: 1px 1px 2px 0 #d0d0d0;
    box-shadow: 1px 1px 2px 0 #d0d0d0;
-   background-color: rgb(94, 40, 219);
+   background-color: green;
    color: white;
    border: 1px solid #ccc;
    border-color: #e4e4e4 #bebebd #e4e4e4;
@@ -1000,4 +1001,19 @@ article p {
 }
 .more-code-show {
   padding: 20px !important;
+}
+.page-content {
+  -moz-box-shadow: 1px 1px 2px 0 rgb(105,105,105);
+  -webkit-box-shadow: 1px 1px 2px 0 rgb(105,105,105);
+  box-shadow: 1px 1px 2px 0 rgb(105,105,105);
+  border-radius:4px;
+  margin: 3px;
+  border: 1px solid rgb(226, 223, 223);
+  background-color: rgb(255,255,255);
+  padding: 10px;
+  width: 98%;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
 }
