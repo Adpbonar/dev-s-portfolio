@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-
-
-<title>Devan Potter-Bonar</title>
-<meta name="description" content="Devan Potter-Bonar is a mobile focused developer, creating user-friendly web apps and websites.">
-
+    <title>Devan Potter-Bonar</title>
+    <meta name="description" content="Devan Potter-Bonar is a mobile focused developer, creating user-friendly web apps and websites.">
 	</header>
 	<body>
 		<div class="about-container">
@@ -68,7 +65,7 @@
 		<h3 class id="code-samples">Code Snippets</h3>
 		<div class="box">
   		<H4>Temperature Conversion</H4>
- 	<p>This Ruby program will ask the user to report the temperature in Celsius and let the user know what that temerpature is in Ferenheit.</p>
+ 	<p>This Ruby program will ask the user to report the temperature in Celsius and let the user know what that temperature is in Fahrenheit.</p>
 </div>
 
 <div class="box">
@@ -231,8 +228,8 @@ foo_bar(long)</code></pre>
                 <h4 style="color: red;">DRAFT</h4>
               <% end %>  
               <div class="blog-title">
-              <%= link_to article.title, article_path(article) %>
-              <small>      (Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
+              <%= link_to article.title, article_path(article) %><br />
+              <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
               </div>
               
               </div>
@@ -240,6 +237,7 @@ foo_bar(long)</code></pre>
             <% end %>
         </div>
       </div>  
+      </div>
   </div>
   <br class="clear" />
     <div class="contact-me">
