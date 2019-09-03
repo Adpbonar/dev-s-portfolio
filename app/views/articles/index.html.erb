@@ -4,20 +4,16 @@
 <br />
 <% @articles.each do |article| %>
   <div class="col-xs-8 col-xs-offset-2">
-   <% if article.published || current_user && current_user == article.user %>
-              <% unless article.published %>
-                  <h5 style="color: red;">DRAFT</h5>
-                <% end %>  
-   <div class="well well-lg">
-    <div class="article-title">
-    <center><p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y") %></center>
-    <hr>
+    <% if article.published || current_user && current_user == article.user %>
+      <% unless article.published %>
+        <h5 style="color: red;">DRAFT</h5>
+    <% end %>  
     </div>
-    <div class="article-body">
+    <cener><div class="article-body">
      <p class="post"><%= article.snippet %>...</p>
      <br />
      <p class="more"><%= link_to 'Read more', article_path(article) %></p>
-    </div>
+    </div></center>
    </div>
   </div>
   <br />
