@@ -981,7 +981,14 @@ article p {
   background-color:#293749;
   padding: 2px;
   border-bottom: 1px dotted silver;
-}
+  font-weight: bold;
+  letter-spacing: 2px;
+  }
 .contact-menu-link a {
-  color: whitesmoke;
+  color: white;
+  text-decoration: none;
+}
+.contact-menu-link a:hover, a:focus {
+  color: silver;
+  text-decoration: none;
 }
