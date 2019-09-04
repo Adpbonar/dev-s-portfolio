@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def resume
+  def contact_me
   end
 
   def more_code
