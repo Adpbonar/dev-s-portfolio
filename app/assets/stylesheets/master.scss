@@ -171,6 +171,7 @@ a{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0;
 }
 .about-container{
  background: image_url('alex-perez-562904-unsplash.png'); 
@@ -453,19 +454,33 @@ display: none;
  color:  rgb(158, 121, 28);
  border-bottom: 1px solid rgb(158, 121, 28);
 }
-.dropdown-meunu.show{
-  margin: 0 !important;
-  min-width: none !important; 
-  display: inline-block !important;
-}
 
 .dropdown-header {
- background-color: #5cb85c;
- border-radius: 25px;
  color: rgb(32, 3, 112) !important;
  margin-bottom: 0;
+ margin-top: 0;
  opacity: .7;
  font-weight:bold;
+ border-radius: 25px;
+ vertical-align: middle;
+}
+.dropdown-menu > li {
+  display: block;
+  height:30px;
+  line-height: 10px;
+  width:100%;
+
+}
+li.dropdown.open {
+  position: static;
+}
+li.dropdown.open .dropdown-menu {
+  display: table;
+  border-radius: 0px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
 }
 .connect {
  color: whitesmoke;
