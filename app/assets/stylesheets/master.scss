@@ -137,7 +137,7 @@ td {
 a{
  color: white;
 }
-.bio a {
+.container-bio a {
   color: grey;
 }
 .bio {
@@ -166,6 +166,11 @@ a{
  margin-right: auto;
  text-align: center;
  height: auto;
+}
+.container-bio{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-container{
  background: image_url('alex-perez-562904-unsplash.png'); 
@@ -302,7 +307,7 @@ li {
 display: none;
  position: fixed;
  bottom: 60px;
- right: 10px;
+ right: 5px;
  background: none;
  font-size: 18px;
  border: none;
@@ -342,6 +347,13 @@ display: none;
  float: center;
  border-radius: 0 !important;
  border: 1px solid white;
+ margin-left: auto !important;
+ margin-right: auto !important;
+ outline: none;
+}
+ .btn-success:hover, .btn-success:focus {
+   outline: none;
+   border: 1px solid white;
 }
 .bio-box {
 -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -441,12 +453,19 @@ display: none;
  color:  rgb(158, 121, 28);
  border-bottom: 1px solid rgb(158, 121, 28);
 }
+.dropdown-meunu.show{
+  margin: 0 !important;
+  min-width: none !important; 
+  display: inline-block !important;
+}
+
 .dropdown-header {
  background-color: #5cb85c;
- color: white !important;
- margin: 1px;
+ border-radius: 25px;
+ color: rgb(32, 3, 112) !important;
  margin-bottom: 0;
  opacity: .7;
+ font-weight:bold;
 }
 .connect {
  color: whitesmoke;
@@ -745,12 +764,6 @@ li {
   margin-right: auto;
   margin-left: auto;
 }
-.btn-success {
- font-family: 'Francois One', sans-serif !important;
- letter-spacing: 3px;
- float: center;
- border-radius: 0 !important;
-}
 .bio-box {
 -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
  -webkit: 1px 1px 2px 0 #d0d0d0;
@@ -822,13 +835,6 @@ li {
 .first-click:hover, .first-click:focus {
  color:  rgb(158, 121, 28);
  border-bottom: 1px solid rgb(158, 121, 28);
-}
-.dropdown-header {
- background-color: #5cb85c;
- color: white !important;
- margin: 2px;
- margin-bottom: 0;
- opacity: .7;
 }
 .connect {
  color: whitesmoke;
