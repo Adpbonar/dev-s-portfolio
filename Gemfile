@@ -72,5 +72,5 @@ end
   gem 'devise'
   gem 'prism-rails'
   gem 'friendly_id', '~> 5.2.4'
-  gem 'react-rails'
+  gem "react_on_rails", "~> 6"
 
