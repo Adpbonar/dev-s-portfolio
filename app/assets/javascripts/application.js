@@ -20,7 +20,4 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require prism
-//= require react
-//= require react_ujs
-//= require components
 //= require_tree .

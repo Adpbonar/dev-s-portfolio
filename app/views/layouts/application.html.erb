@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://kit.fontawesome.com/1ed4546683.js"></script>
-
+      <%= favicon_link_tag asset_path('favcon.png') %>
   </head>
   <% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
@@ -18,7 +18,6 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
   <body>
-  <%# <%= render 'shared/messages' %>
     <%= render 'layouts/navigation'%>  
 
   <div class="footer" style="width: 100%;"> 
