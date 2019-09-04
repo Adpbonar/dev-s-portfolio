@@ -268,10 +268,6 @@ margin-bottom: 40px;
 li {
  text-align: center;
 }
- a{
-   text-decoration: none;
-   color: white;
- }
  #topbtn {
 display: none;
  position: fixed;
@@ -281,7 +277,7 @@ display: none;
  font-size: 18px;
  border: none;
  outline: none;
- color: rgb(37, 131, 168);
+ color: rgb(112, 161, 180);
  text-shadow: 1px 2px white;
  cursor: pointer;
  padding: 15px;
@@ -349,23 +345,25 @@ display: none;
 .resume-box {
  padding: 6px;
 }
-.btn.btn-default {
+.btn-default {
  background-color: none;
  font-weight: bolder;
  color: rgb(223, 217, 217);  
  font-family: 'Raleway', sans-serif;
  display: inline;
  vertical-align: middle;
-}
-.btn.btn-default p {
- font-size: 40px;
-}
-.btn.btn-default:hover, .btn.btn-default:focus {
- background-color: rgb(85, 84, 81);
- color: whitesmoke;
  outline: none;
 }
-.about-more a {
+.btn-default p {
+ font-size: 40px;
+}
+.btn-default:hover, .btn-default:focus, .btn:active {
+ background-color: rgb(85, 84, 81);
+ color: whitesmoke;
+ outline: none !important;
+ box-shadow: none;
+}
+.about-more a::selection {
  color: rgb(158, 121, 28) !important;
  background: none;
  text-align:center;
@@ -689,17 +687,17 @@ margin-bottom: 40px;
  background-color: #202020;
  border-top: 2px solid grey;
 }
-.contact-link {
+.contact-link a{
  color: white;
  font-weight: bold;
  font-size: 13px;
 }
-.email1:hover, .email:focus {
+.email1:hover , .email1:focus {
  background-color: gray !important;
  text-decoration: none;
  border: 2px solid #413d3d;
  font-weight: bold;
- color: navy;
+ color: navy !important;
  letter-spacing: 0 ;
 }
 li {
