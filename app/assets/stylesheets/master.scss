@@ -6,9 +6,17 @@ body {
   margin: 0 !important;
   width: 100%;
 }
+.more-code pre {
+  border-radius: 20px;
+  border: 2px solid blue;
+}
 .article-actions {
  border-top: 1px solid #eaeaea;
  padding-top: 5px;
+}
+pre {
+
+  border-radius: 10px;
 }
 .article-title {
  font-weight: bold;
@@ -291,20 +299,22 @@ li {
    color: white;
  }
  #topbtn {
- display: none;
+display: none;
  position: fixed;
- bottom: 20px;
+ bottom: 75px;
  right: 30px;
  background: none;
  z-index: 99;
  font-size: 18px;
  border: none;
  outline: none;
- color: rgb(101, 201, 240);
+ color: rgb(37, 131, 168);
+ text-shadow: 1px 2px white;
  cursor: pointer;
  padding: 15px;
  border-radius: 100%;
  width: 45px;
+ z-index: 800;
 }
 
 #topbtn:hover, topbtn:focus {
@@ -725,29 +735,7 @@ li {
    color: white;
  }
  a:hover, a:focus {
-   background: none !important;
- }
- #topbtn {
- display: none;
- position: fixed;
- bottom: 20px;
- right: 30px;
- background: none;
- z-index: 99;
- font-size: 18px;
- border: none;
- outline: none;
- color: rgb(147, 211, 236);
- cursor: pointer;
- padding: 15px;
- border-radius: 100%;
- width: 45px;
-}
-
-#topbtn:hover, topbtn:focus {
- color: rgb(88, 141, 255);
- box-shadow: none;
- background: none;
+  background: none !important;
 }
 .table-top{
   border: 1px solid white;
