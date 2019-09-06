@@ -204,6 +204,15 @@ h3 {
 .box p {
   padding: 2px;
 }
+.box2 {
+  float: left; 
+   width: 42.5%;
+   margin-left: 5%;
+   margin-top: 80px;
+ }
+ .box2 p {
+   padding: 2px;
+ }
 .clear {
  clear: both;
 }
@@ -232,19 +241,6 @@ margin-bottom: 40px;
  height: auto;
  width: 100% !important;
 }
-// .contact-me {
-//  height: 350px;
-//  background-color: #202020;
-//  border-top: 2px solid grey;
-// }
-// .contact-headline {
-//  color: white;
-// }
-// .contact-me {
-//  height: auto;
-//  color: #202020 !important;
-//  padding-top: 20px;
-// }
 .contact-info {
  color: grey;
  font-size: 20px !important;
@@ -1001,5 +997,23 @@ article p {
   }
   .about-text {
     width: 85% !important;
+  }
+  .box { 
+     width: 90%;
+     margin-left: 5%;
+     margin-top: 80px;
+     letter-spacing: 4px;
+   }
+   .box p, h4 {
+     text-align: left !important;
+     padding-left: 2px;
+   }
+   .box2 p, h4 {
+    text-align: left !important;
+    padding-left: 2px;
+    letter-spacing: 4px;
+  }
+  .index-heder h3 {
+    letter-spacing: 4px !important;
   }
 }
