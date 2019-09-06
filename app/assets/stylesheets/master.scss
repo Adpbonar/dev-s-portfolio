@@ -958,6 +958,9 @@ article p {
 }
 .about-formatter {
   margin: 0;
+  margin-left:auto;
+  margin-right: auto;
+  width: 100%;
 }
 .more-code-show {
   padding: 20px !important;
@@ -991,4 +994,12 @@ article p {
 .contact-menu-link a:hover, a:focus {
   color: silver;
   text-decoration: none;
+}
+@media screen and (min-device-width: 500px) and (max-device-width: 1024px) {
+  .about-photo {
+    width: 85% !important;
+  }
+  .about-text {
+    width: 85% !important;
+  }
 }
