@@ -6,26 +6,29 @@
   <h1 align="center">Read My Articles</h1>
   <hr class="cme-r-a">
   <br />
-    <% @articles.each do |article| %>
-      <div class="col-xs-8 col-xs-offset-2">
-        <h2 class="post-title"><%= article.title %></h2>
-        <center><p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y").upcase %></center>
-        <% if article.published || current_user && current_user == article.user %>
-          <% unless article.published %>
-            <h5 style="color: red;">DRAFT</h5>
-        <% end %>  
+  <% @articles.each do |article| %>
+    <div class="col-xs-8 col-xs-offset-2">
+      <h2 class="post-title"><%= article.title %></h2>
+      <center>
+        <p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y").upcase %>
+      </center>
+      <% if article.published || current_user && current_user == article.user %>
+        <% unless article.published %>
+          <h5 style="color: red;">DRAFT</h5>
+        <% end %>
+    </div>
+    <cener>
+      <div class="article-body">
+        <p class="post"><%= article.snippet %>...</p>
+        <br />
+        <p class="more"><%= link_to 'Read more', article_path(article) %></p>
+        <br />
+        <br />
+        <% end %>
+        <% end%>
       </div>
-    <cener><div class="article-body">
-    <p class="post"><%= article.snippet %>...</p>
-    <br />
-    <p class="more"><%= link_to 'Read more', article_path(article) %></p>
-    </center>
-      <br />
-      <br />
-    <% end %>
-    <% end%>
-  </div>
-  </div>
+    </div>
+  </center>
 </div>
 <br />
 <br />

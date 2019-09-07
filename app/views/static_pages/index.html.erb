@@ -1,72 +1,82 @@
 <html lang="en">
-	<header>
-    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Francois+One|Notable&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	</header>
-	<body>
-		<div class="about-container" title="A bit about Devan Potter-Bonar">
+<header>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One|Notable&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</header>
+
+<body>
+  <div class="about-container" title="A bit about Devan Potter-Bonar">
+    <br />
+    <br />
+    <div class="table-top" title="home page section navigation helper">
+      <table class="options" style="text-align: center; width: 95%; width: 100hw;" align="center" cellspacing="2">
+        <tbody>
+          <tr>
+            <td><a href="#code-samples" class="nav-link">CODE SAMPLES</a></td>
+            <td><a href="#web-apps" class="nav-link">WEB APPS</a></td>
+            <td><a href="#skills-and-tools" class="nav-link">SKILLS &amp; TOOLS</a></td>
+            <br />
+          </tr>
+        </tbody>
+      </table>
       <br />
-      <br />
-  <div class="table-top" title="home page section navigation helper">
-  <table class="options" style="text-align: center; width: 95%; width: 100hw;" align="center" cellspacing="2">
-  <tbody>
-    <tr>
-      <td><a href="#code-samples" class="nav-link">CODE SAMPLES</a></td>
-      <td><a href="#web-apps" class="nav-link">WEB APPS</a></td>
-      <td><a href="#skills-and-tools" class="nav-link">SKILLS &amp; TOOLS</a></td>
-      <br />
-    </tr>
-  </tbody>
-</table>
-<br />
-</div>
-			<div class="about">
-			  <%= image_tag 'me.jpg', class: 'me', alt: "Photo of Devan Potter-Bonar" %>
-				<h1 style="text-shadow: 2px 2px grey">Devan Potter-Bonar</h1>
+    </div>
+    <div class="about">
+      <%= image_tag 'me.jpg', class: 'me', alt: "Photo of Devan Potter-Bonar" %>
+      <h1 style="text-shadow: 2px 2px grey">Devan Potter-Bonar</h1>
 
 
-				<h2 style="letter-spacing: 1.5px;">WEB DEVELOPER</h2>
+      <h2 style="letter-spacing: 1.5px;">WEB DEVELOPER</h2>
 
-        <div class="bio-box">
-				<p class="bio">
-				Devan Potter-Bonar is a mobile focused developer, creating user-friendly web apps and websites. His previous experience has taught him that Branding is as important as the product itself—sometimes more. With training in JavaScript, CSS, HTML, Ruby/Rails object-oriented programming: Devan is adept at finding creative and functional solutions to any problems that may arise. Believing in clear communication and excelling as part of a team or individually; He is excited to create intuitive web applications that can be easily used day after day…
+      <div class="bio-box">
+        <p class="bio">
+          Devan Potter-Bonar is a mobile focused developer, creating user-friendly web apps and websites. His previous
+          experience has taught him that Branding is as important as the product itself—sometimes more. With training in
+          JavaScript, CSS, HTML, Ruby/Rails object-oriented programming: Devan is adept at finding creative and
+          functional solutions to any problems that may arise. Believing in clear communication and excelling as part of
+          a team or individually; He is excited to create intuitive web applications that can be easily used day after
+          day…
         </p>
-        </div>
-          <br />         
-			</div>
-		</div>
-<br />
-<div class="container-bio">
+      </div>
+      <br />
+    </div>
+  </div>
+  <br />
+  <div class="container-bio">
     <div class="dropdown">
-    <center><button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" title="See my profiles, articles and resume">Hire Me
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu style="width: 100% !important;" align="center">
-      <li class="dropdown-header">Communicate</li>
-      <li class="menu-item"><a href="mailto:devan.potter.bonar@gmail.com">Email</a></li>
-      <li class="dropdown-header">Articles</li>
-      <li class="menu-item"><a href="<%= articles_path %>">Read Articles</a></li>
-      <li class="dropdown-header">Resume</li>
-      <li class="menu-item"><%= link_to "Download", "/Devan_Potter-Bonar_ Resume.pdf", :target => "_blank" %></li>
-      <li class="dropdown-header">Profiles</li>
-      <li class="menu-item"><a target="_blank" href="https://www.linkedin.com/in/devanpotterbonar/">LinkedIn</a></li>
-      <li class="menu-item"><a target="_blank" href="https://github.com/Adpbonar">GitHub</a></li>
-    </ul></center>
+      <center><button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"
+          title="See my profiles, articles and resume">Hire Me
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu style=" width: 100% !important;" align="center">
+          <li class="dropdown-header">Communicate</li>
+          <li class="menu-item"><a href="mailto:devan.potter.bonar@gmail.com">Email</a></li>
+          <li class="dropdown-header">Articles</li>
+          <li class="menu-item"><a href="<%= articles_path %>">Read Articles</a></li>
+          <li class="dropdown-header">Resume</li>
+          <li class="menu-item"><%= link_to "Download", "/Devan_Potter-Bonar_ Resume.pdf", :target => "_blank" %></li>
+          <li class="dropdown-header">Profiles</li>
+          <li class="menu-item"><a target="_blank" href="https://www.linkedin.com/in/devanpotterbonar/">LinkedIn</a>
+          </li>
+          <li class="menu-item"><a target="_blank" href="https://github.com/Adpbonar">GitHub</a></li>
+        </ul>
+      </center>
+    </div>
   </div>
-</div>
-<div>
-<br/>
-<div class="page-content">
-  <h3 id="code-samples" class="index-heder">Code Snippets</h3>
-  <div class="box2">
-    <H4>Temperature Conversion</H4>
-    <p>This Ruby program will ask the user to report the temperature in Celsius and let the user know what that temperature is in Fahrenheit.</p>
-  </div>
+  <div>
+    <br />
+    <div class="page-content">
+      <h3 id="code-samples" class="index-heder">Code Snippets</h3>
+      <div class="box2">
+        <H4>Temperature Conversion</H4>
+        <p>This Ruby program will ask the user to report the temperature in Celsius and let the user know what that
+          temperature is in Fahrenheit.</p>
+      </div>
 
-<div class="box2">
-<pre><code class="language-ruby">puts &quot;What is the temperature?&quot;
+      <div class="box2">
+        <pre><code class="language-ruby">puts &quot;What is the temperature?&quot;
 num = gets.chomp
 
 def celsius(num)
@@ -76,12 +86,12 @@ end
 
 puts &quot;If it is #{num} degrees Celsius, it is #{celsius(num)} 
 Fahrenheit.&quot;</code></pre>
-</div>
+      </div>
 
-<br class="clear" />
+      <br class="clear" />
 
-<div class="box2">
-<pre><code class="language-ruby">puts &quot;Enter a number.&quot;
+      <div class="box2">
+        <pre><code class="language-ruby">puts &quot;Enter a number.&quot;
 number = gets.chomp
 int = number.to_i
 if int % 100 == 11 || int % 100 == 12 || int % 100 == 13
@@ -98,21 +108,23 @@ if int % 100 == 11 || int % 100 == 12 || int % 100 == 13
      else
     puts &quot;#{int}th&quot;
 end</code></pre>
-</div>
+      </div>
 
-<div class="box2">
-	<h4>Ordinal Challenge</h4>
-	<p>This Ruby program will convert a number to its ordinal. For example, if a user enters the number 13, the program will display it's appropriate position.</p>
-</div>
+      <div class="box2">
+        <h4>Ordinal Challenge</h4>
+        <p>This Ruby program will convert a number to its ordinal. For example, if a user enters the number 13, the
+          program will display it's appropriate position.</p>
+      </div>
 
-<br class="clear" />
-<div class="box2">
-  <h4>Foobar</h4>
-	<p>This Ruby program is an adaptation of the classic programing challenge. It displays the sequence of the Foobar pattern.</p>
-</div>
+      <br class="clear" />
+      <div class="box2">
+        <h4>Foobar</h4>
+        <p>This Ruby program is an adaptation of the classic programing challenge. It displays the sequence of the
+          Foobar pattern.</p>
+      </div>
 
-<div class="box2">
-<pre><code class="language-ruby">puts &quot;How many items do you want to see?&quot;
+      <div class="box2">
+        <pre><code class="language-ruby">puts &quot;How many items do you want to see?&quot;
 long = gets.chomp
 
 def foo_bar(long)
@@ -132,114 +144,119 @@ end
 
 
 foo_bar(long)</code></pre>
-</div>
+      </div>
 
-<br class="clear" />
-<br class="clear" />
-<p class="more"><%= link_to' See more code?', more_code_path %></p>
-<br />
-<h3 id="web-apps" class="index-heder">Web Apps</h3>	
+      <br class="clear" />
+      <br class="clear" />
+      <p class="more"><%= link_to' See more code?', more_code_path %></p>
+      <br />
+      <h3 id="web-apps" class="index-heder">Web Apps</h3>
 
-  <div class="box">
-      <h4>Quote Generator</h4>
-      <a target="_blank" href="https://splurty-devan-potterbonar.herokuapp.com/"><%= image_tag 'splurty.png', class: 'full-width', alt: "Splurty app screenshot" %></a>
-      <p> A database-powered quote generator, using the Ruby on Rails framework.
-          Uses Git and GitHub for version control, and launched on Heroku.</p>
-    </div>
-     <div class="box">
-      <h4>Yelp Clone</h4>
-      <a target="_blank" href="https://nomster-devan-potterbonar.herokuapp.com/"><%= image_tag 'nomster.png', class: 'full-width', alt: "Nomster app screenshot" %></a>
-      <p>
-        A Yelp clone that integrates with the Google Maps and Geocoder APIs.
-        It includes features like user comments, star ratings,
-        image uploading, and user authentication.
-      </p>
-    </div>
-    <br class="clear" />
-    <div class="mobile">
       <div class="box">
-        <h4>Two-Sided Market Place</h4>
-        <a target="_blank" href="https://flixter-devan-potterbonar.herokuapp.com/"><%= image_tag 'flixter.png', class: 'full-width', alt: "Flixter app screenshot" %></a>
-        <p>
-          A two-sided, video-streaming marketplace platform that
-          features credit card payment capabilities. It also includes user role
-          management, complex user interfaces, and advanced
-          database relationships.
-        </p>
+        <h4>Quote Generator</h4>
+        <a target="_blank"
+          href="https://splurty-devan-potterbonar.herokuapp.com/"><%= image_tag 'splurty.png', class: 'full-width', alt: "Splurty app screenshot" %></a>
+        <p> A database-powered quote generator, using the Ruby on Rails framework.
+          Uses Git and GitHub for version control, and launched on Heroku.</p>
       </div>
       <div class="box">
-        <h4>Test Driven Development</h4>
-        <a target="_blank" href="https://inpic-devan-potter-bonar.herokuapp.com/"><%= image_tag 'grammable.png', class: 'full-width', alt: "InPic app screenshot" %></a>
+        <h4>Yelp Clone</h4>
+        <a target="_blank"
+          href="https://nomster-devan-potterbonar.herokuapp.com/"><%= image_tag 'nomster.png', class: 'full-width', alt: "Nomster app screenshot" %></a>
         <p>
-          An Instagram clone that was built using industry-standard, test driven
-          development (following numerous red/green/refactor cycles).
+          A Yelp clone that integrates with the Google Maps and Geocoder APIs.
+          It includes features like user comments, star ratings,
+          image uploading, and user authentication.
         </p>
       </div>
       <br class="clear" />
-      <div class="box">
-        <h4>Single Page To-do Application</h4>
-        <a target="_blank" href="https://todolist-devanpotterbonar.herokuapp.com/"><%= image_tag 'todoster.png', class: 'full-width', alt: "Todo List app screenshot" %></a>
-        <p>
-          This single page to-do application features a
-          fluid user interface. By using JavaScript users can rapidly add dynamic content.
-        </p>
-      </div>
-      <div class="box">
-        <h4>Agile Team Project</h4>
-        <%= image_tag 'chess.png', alt: "Chess app screenshot", class: 'full-width' %>
-        <p class="coming-soon">COMING SOON</p>
-        <p>
-          Worked on an Agile software development team building
-          a chess application. Under the guidance of a senior software engineer,
-          we had weekly Agile team meetings for code reviews, sprint planning,
-          and feature assignments.
-        </p>
-      </div>
-    </div>
-    <br class="clear" /><br />
-    <p class="more"><%= link_to 'See more projects?', more_apps_path %></p>
-     <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
-     <br />
-     <div>
-     <p class="s-t">
-      Devan has developed proficiency and expertise
-      in the following programming languages and
-      comfort with the following tools.
-    </p>
-	<div class="icons">
-      <%= image_tag 'github.png', alt: "GitHub" %>
-      <%= image_tag 'trello.png', alt: "Trello" %>
-      <%= image_tag 'slack.png', alt: "Slack" %>
-	   
-
-	     <br class="clear" />
-       <%= image_tag 'skills.png', alt: "Skills: HTML/CSS, Ruby, Rails, Algorithms, Javascript", class: 'icon' %>
-	</div>
-  <div>
-    <div class="blog-box">
-        <h1 class="text-center">Read About My Code</h1>
-        <br />
-        <% @articles.each do |article| %>
-            <div class="well well-lg">
-            <% if article.published || current_user && current_user == article.user %>
-              <% unless article.published %>
-                <h4 style="color: red;">DRAFT</h4>
-              <% end %>  
-              <div class="blog-title">
-              <%= link_to article.title, article_path(article) %><br />
-              <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
-              </div>
-              
-              </div>
-            <% end %>
-            <% end %>
+      <div class="mobile">
+        <div class="box">
+          <h4>Two-Sided Market Place</h4>
+          <a target="_blank"
+            href="https://flixter-devan-potterbonar.herokuapp.com/"><%= image_tag 'flixter.png', class: 'full-width', alt: "Flixter app screenshot" %></a>
+          <p>
+            A two-sided, video-streaming marketplace platform that
+            features credit card payment capabilities. It also includes user role
+            management, complex user interfaces, and advanced
+            database relationships.
+          </p>
         </div>
+        <div class="box">
+          <h4>Test Driven Development</h4>
+          <a target="_blank"
+            href="https://inpic-devan-potter-bonar.herokuapp.com/"><%= image_tag 'grammable.png', class: 'full-width', alt: "InPic app screenshot" %></a>
+          <p>
+            An Instagram clone that was built using industry-standard, test driven
+            development (following numerous red/green/refactor cycles).
+          </p>
+        </div>
+        <br class="clear" />
+        <div class="box">
+          <h4>Single Page To-do Application</h4>
+          <a target="_blank"
+            href="https://todolist-devanpotterbonar.herokuapp.com/"><%= image_tag 'todoster.png', class: 'full-width', alt: "Todo List app screenshot" %></a>
+          <p>
+            This single page to-do application features a
+            fluid user interface. By using JavaScript users can rapidly add dynamic content.
+          </p>
+        </div>
+        <div class="box">
+          <h4>Agile Team Project</h4>
+          <%= image_tag 'chess.png', alt: "Chess app screenshot", class: 'full-width' %>
+          <p class="coming-soon">COMING SOON</p>
+          <p>
+            Worked on an Agile software development team building
+            a chess application. Under the guidance of a senior software engineer,
+            we had weekly Agile team meetings for code reviews, sprint planning,
+            and feature assignments.
+          </p>
+        </div>
+      </div>
+      <br class="clear" /><br />
+      <p class="more"><%= link_to 'See more projects?', more_apps_path %></p>
+      <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
+      <br />
+      <div>
+        <p class="s-t">
+          Devan has developed proficiency and expertise
+          in the following programming languages and
+          comfort with the following tools.
+        </p>
+        <div class="icons">
+          <%= image_tag 'github.png', alt: "GitHub" %>
+          <%= image_tag 'trello.png', alt: "Trello" %>
+          <%= image_tag 'slack.png', alt: "Slack" %>
+
+
+          <br class="clear" />
+          <%= image_tag 'skills.png', alt: "Skills: HTML/CSS, Ruby, Rails, Algorithms, Javascript", class: 'icon' %>
+        </div>
+        <div>
+          <div class="blog-box">
+            <h1 class="text-center">Read About My Code</h1>
+            <br />
+            <% @articles.each do |article| %>
+            <div class="well well-lg">
+              <% if article.published || current_user && current_user == article.user %>
+              <% unless article.published %>
+              <h4 style="color: red;">DRAFT</h4>
+              <% end %>
+              <div class="blog-title">
+                <%= link_to article.title, article_path(article) %><br />
+                <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
+              </div>
+
+            </div>
+            <% end %>
+            <% end %>
+          </div>
+        </div>
+        <br class="clear" />
+      </div>
     </div>
-    <br class="clear" />
-  </div>
-  </div>
- <br />
- <br />
- <br />
-  <br />
- </body>
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
