@@ -1006,6 +1006,18 @@ article p {
   color: silver;
   text-decoration: none;
 }
+.coming-soon {
+  font-weight: bold;
+  color: green;
+  text-align: center !important;
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+ -webkit: 1px 1px 2px 0 #d0d0d0;
+ box-shadow: 1px 1px 1px 0 #d0d0d0;
+ padding: 4px;
+}
 @media (max-width: 768px) {
   .about-photo {
     width: 85% !important;
@@ -1017,8 +1029,10 @@ article p {
      width:80%;
      margin-top: 80px;
      letter-spacing: 4px;
-     margin-left:auto;
-     margin-right:auto;
+   }
+   .mobile {
+    margin-left:auto !important;
+    margin-right:auto !important;
    }
    .box p, h4 {
      text-align: left !important;
