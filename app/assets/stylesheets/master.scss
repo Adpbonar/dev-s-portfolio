@@ -1045,3 +1045,11 @@ article p {
     text-align: left !important;  
   }
 }
+@media screen and (max-width: 1024px){
+  .box {
+    float: left; 
+     width: 42.5%;
+     margin-left: 5%;
+     margin-top: 80px;
+   }
+}
