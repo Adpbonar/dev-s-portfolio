@@ -1045,7 +1045,7 @@ article p {
     text-align: left !important;  
   }
 }
-@media (max-width: 769px) {
+@media (min-width: 769px) {
   .box {
     float: left; 
      width: 42.5%;
