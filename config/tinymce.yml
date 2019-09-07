@@ -1,6 +1,0 @@
-toolbar:
-  - styleselect | bold italic | undo redo image | link table code 
-  - image
-  - link
-  - code
-  - table
