@@ -1,7 +1,7 @@
  <div class="panel-body">
 
 
-   <%= tinymce_assets %>
+   <%# <%= tinymce_assets %>
 
 <h1>Create an Article</h1>
  <div class="col-10 offset-1">
@@ -15,7 +15,7 @@
    <%= f.text_area :snippet, :class => "tinymce", placeholder: "Write a snippet.", :rows => 10, :cols => 120 %>  
    <br class="clear" />
   <%= f.text_area :post, :class => "tinymce", placeholder: "Write a post.", :rows => 40, :cols => 120 %> 
-  <br /> <%= tinymce %>
+  <%# <br /> <%= tinymce %>
  <%= f.submit %>
  </p>
 <% end %>
