@@ -1037,6 +1037,7 @@ article p {
    .box p, h4 {
      text-align: left !important;
      padding-left: 2px;
+     hyphens: auto;
    }
    .box img {
      max-height: 200px;
@@ -1045,9 +1046,11 @@ article p {
     text-align: left !important;
     padding-left: 2px;
     letter-spacing: 4px;
+    hyphens: auto;
   }
   .index-heder h3 {
     letter-spacing: 4px !important;
+    hyphens: auto;
   }
   .s-t {
     width: 90%;
