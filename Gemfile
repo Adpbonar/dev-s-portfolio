@@ -73,4 +73,4 @@ end
   gem 'prism-rails'
   gem 'friendly_id', '~> 5.2.4'
   gem "react_on_rails", "~> 6"
-
+  gem 'tinymce-rails'
