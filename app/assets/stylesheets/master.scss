@@ -441,8 +441,6 @@ display: none;
   border-bottom: 1px solid navy;
  } 
  
-
-
 .first-click {
  padding-bottom: 1px;
  border-bottom: 1px solid white;
@@ -1045,12 +1043,4 @@ article p {
     letter-spacing: 4px;
     text-align: left !important;  
   }
-}
-.media {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.media > * {
-  flex: 1 1 250px;
 }
