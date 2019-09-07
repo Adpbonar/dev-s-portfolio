@@ -1031,8 +1031,8 @@ article p {
      letter-spacing: 4px;
    }
    .mobile {
-    margin-left:auto !important;
-    margin-right:auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
    }
    .box p, h4 {
      text-align: left !important;
@@ -1055,5 +1055,8 @@ article p {
     margin-top: 80px;
     letter-spacing: 4px;
     text-align: left !important;  
+  }
+  .page-content {
+    width: 85%;
   }
 }
