@@ -513,11 +513,12 @@ topbtn:focus {
 
 .first-click {
   padding-bottom: 1px;
-  border-bottom: 1px solid blue;
-  width: 40px;
+  // border-bottom: 1px dotted blue;
+  width: 38px;
   margin-left: auto;
-  font-size: 12px !important;
   margin-right: auto;
+  font-size: 12px !important;
+  padding: bottom 2px;
   color: blue;
   font-weight: bolder;
   letter-spacing: 4px;
@@ -528,7 +529,7 @@ topbtn:focus {
 .first-click:hover,
 .first-click:focus {
   color: rgb(158, 121, 28);
-  border-bottom: 1px solid rgb(158, 121, 28);
+  // border-bottom: 1px solid rgb(158, 121, 28);
 }
 
 .dropdown-header {
