@@ -36,15 +36,16 @@
           Devan Potter-Bonar is a mobile focused Certified Full Stack Web Developer specializing in creating
           user-friendly web apps and sites.
         </p>
-        <p data-toggle="collapse" data-target="#more-info" title="More"><i class="fas fa-chevron-down"></i></p>
-                <div id="more-info" class="collapse">
+        <p data-toggle="collapse" data-target="#more-info" class="first-click" title="More">More</p>
+        <div id="more-info" class="collapse firstclick">
           <p class="bio">
             With a clear understanding that Branding is as important as the product itself—sometimes more, Devan has
             successfully developed and implemented a wide-range of brand concepts for his clients. He is determined and
             reliable. Devan has a very strong work-ethic, thirst for knowledge and ever expanding experience. He is very
             attentive to meet the needs of his customers. Devan’s training in JavaScript/EC6, CSS, HTML, Ruby/Rails,
             enables him to find imaginative and functional solutions to any problems that may arise. He keeps abreast of
-            evolving trends and techniques. With a strong sense of community involvement, Devan plans to devote a portion
+            evolving trends and techniques. With a strong sense of community involvement, Devan plans to devote a
+            portion
             of his time to creating apps for community organizations and non-profits.
           </p>
           <p class="bio">
@@ -55,11 +56,18 @@
       </div>
       </div>
       <script>
-        $(document).ready(function () {
-          $("#moreInfo").click(function () {
-            $(".more-info").toggle('slow', function () {});
+        $(function () {
+          $(".first-click").click(function () {
+            $(this).text(function (i, text) {
+              return text === "Less" ? "More" : "Less";
+            })
           });
-        });
+        })
+        // $(document).ready(function () {
+        //   $("#moreInfo").click(function () {
+        //     $(".more-info").toggle('slow', function () {});
+        //   });
+        // });
       </script>
       <br />
     </div>

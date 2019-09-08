@@ -513,11 +513,12 @@ topbtn:focus {
 
 .first-click {
   padding-bottom: 1px;
-  border-bottom: 1px solid white;
-  width: 60px;
+  border-bottom: 1px solid blue;
+  width: 40px;
   margin-left: auto;
+  font-size: 12px !important;
   margin-right: auto;
-  color: white;
+  color: blue;
   font-weight: bolder;
   letter-spacing: 4px;
   font-size: 20px;
@@ -940,25 +941,6 @@ a:focus {
 
 .resume-box {
   padding: 6px;
-}
-
-.first-click {
-  padding-bottom: 1px;
-  border-bottom: 1px solid white;
-  width: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  font-weight: bolder;
-  letter-spacing: 4px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.first-click:hover,
-.first-click:focus {
-  color: rgb(158, 121, 28);
-  border-bottom: 1px solid rgb(158, 121, 28);
 }
 
 .connect {
