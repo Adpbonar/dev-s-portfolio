@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Devan Potter-Bonar</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="https://kit.fontawesome.com/1ed4546683.js"></script>
-      <%= favicon_link_tag asset_path('favcon.png') %>
-
-  
-
-  </head>
-  <% if notice.present? %>
+<head>
+  <title>Devan Potter-Bonar</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/1ed4546683.js"></script>
+  <%= favicon_link_tag asset_path('favcon.png') %>
+</head>
+<% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-  <body>
-    <%= render 'layouts/navigation'%>  
 
-  <div class="footer" style="width: 100%;"> 
-  <% if user_signed_in? %>
+<body>
+  <%= render 'layouts/navigation'%>
+
+  <div class="footer" style="width: 100%;">
+    <% if user_signed_in? %>
     <ul class="footer-bar">
       <li style="display: inline;">
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-default', :stye => "padding: none;" %>
@@ -32,46 +30,56 @@
       <li style="display: inline;">
         <%= link_to "Create Article", new_article_path, class: 'btn btn-default', :stye => "padding: none;"  %>
       </li>
-    <% else %>
+      <% else %>
       <li>
         <div></div>
-      </li>    
-    <% end %>
+      </li>
+      <% end %>
     </ul>
-     <center><div class="btn-group">
-      <a href="mailto:devan.potter.bonar@gmail.com" class="btn btn-default"><i class="fas fa-envelope-square fa-2x"></i></</a>
-      <a target="_blank" href="https://github.com/Adpbonar" class="btn btn-default"><i class="fab fa-github-square fa-2x"></i></</a>
-      <a target="_blank" href="https://www.linkedin.com/in/devanpotterbonar/" class="btn btn-default"><i class="fab fa-linkedin fa-2x"></i></a>
-      <%= link_to 'Contact me', contact_me_path,  class: 'btn btn-default' %>
-      <% if ! user_signed_in? %>
-          <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-default' %></center>
+    <center>
+      <div class="btn-group">
+        <a href="mailto:devan.potter.bonar@gmail.com" class="btn btn-default">
+          <i class="fas fa-envelope-square fa-2x"></i>
+        </a> 
+        <a target="_blank" href="https://github.com/Adpbonar" class="btn btn-default">
+          <i class="fab fa-github-square fa-2x"></i>
+        </a> 
+        <a target="_blank" href="https://www.linkedin.com/in/devanpotterbonar/" class="btn btn-default">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <%= link_to 'Contact me', contact_me_path,  class: 'btn btn-default' %>
+        <% if ! user_signed_in? %>
+            <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-default' %>
+        </center>
         <% end %>
-        </div>
-        
-</div>  
+    </div>
+  </div>
 
-<button onclick="topFunction()" id="topbtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
-
+  <button onclick="topFunction()" id="topbtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
 
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("topbtn").style.display = "block";
-  } else {
-    document.getElementById("topbtn").style.display = "none";
-  }
-}
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-    <%= yield %>
-  </body>
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("topbtn").style.display = "block";
+      } else {
+        document.getElementById("topbtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <%= yield %>
+</body>
+
 </html>
