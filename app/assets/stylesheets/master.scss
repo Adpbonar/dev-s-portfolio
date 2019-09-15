@@ -11,12 +11,13 @@ body {
 pre {
   height: 400px;
 }
+
 .scroll {
   margin: 0 !important;
-  width:200px;
-  display:inline-block;
-  position:fixed;
-  left:-85px;
+  width: 200px;
+  display: inline-block;
+  position: fixed;
+  left: -85px;
   padding: 5px;
   padding-left: 2px;
   padding-right: 2px;
@@ -36,6 +37,7 @@ pre {
   -webkit-box-shadow: 1px 1px 1px 1px #363636;
   box-shadow: 1px 1px 1px 1px #363636;
 }
+
 pre::-webkit-scrollbar {
   width: 0 !important
 }
@@ -1113,6 +1115,14 @@ a:focus {
   color: white !important;
 }
 
+.brand-mobile {
+  display: none;
+}
+
+.brand {
+  display: block;
+}
+
 article p {
   font-size: 1.1em;
   line-height: 1.5em;
@@ -1309,5 +1319,17 @@ a:focus {
 
   .more-code img {
     width: 100%;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .brand-mobile {
+    display: block !important;
+  }
+
+  .brand {
+    display: none !important;
   }
 }
