@@ -12,6 +12,12 @@ pre {
   height: 400px;
 }
 
+.more-code img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .more-code pre {
   border-radius: 20px;
   border: 2px solid blue;
@@ -1099,10 +1105,6 @@ article p {
   display: inline;
 }
 
-.more-code img {
-  width: 100%;
-}
-
 .about-text {
   font-family: 'Dawning of a New Day', cursive;
   font-size: 1.5em;
@@ -1268,5 +1270,8 @@ a:focus {
     text-decoration: none;
     display: inline !important;
   }
-  
+
+  .more-code img {
+    width: 100%;
+  }
 }
