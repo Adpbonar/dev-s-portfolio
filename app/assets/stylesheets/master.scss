@@ -11,6 +11,40 @@ body {
 pre {
   height: 400px;
 }
+.scroll {
+  margin: 0 !important;
+  width:200px;
+  display:inline-block;
+  position:fixed;
+  left:-85px;
+  padding: 5px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  color: white;
+  text-transform: uppercase;
+  text-align: center !important;
+  background-color: navy;
+  font-weight: bold;
+  margin-top: 0;
+  z-index: 600;
+  -moz-box-shadow: 1px 1px 1px 1px #363636;
+  -webkit-box-shadow: 1px 1px 1px 1px #363636;
+  box-shadow: 1px 1px 1px 1px #363636;
+}
+pre::-webkit-scrollbar {
+  width: 0 !important
+}
+
+pre {
+  -ms-overflow-style: none;
+}
+
+pre {
+  overflow: -moz-scrollbars-none;
+}
 
 .more-code img {
   width: 80%;
@@ -430,7 +464,7 @@ topbtn:focus {
 
 .bio-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 1px 0 #d0d0d0;
   background: #fff;
   border: 1px solid #ccc;
@@ -893,7 +927,7 @@ a:focus {
 
 .bio-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 1px 0 #d0d0d0;
   background: #fff;
   border: 1px solid #ccc;
@@ -911,7 +945,7 @@ a:focus {
 
 .blog-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
   background-color: green;
   color: white;
@@ -1114,7 +1148,7 @@ article p {
   background-size: cover;
   box-shadow: 1px 2px rgb(207, 205, 205);
   -moz-box-shadow: 1px 2px rgb(207, 205, 205);
-  -webkit: 1px 2px rgb(207, 205, 205);
+  -webkit-box-shadow: 1px 2px rgb(207, 205, 205);
   border-radius: 2px;
   width: 50%;
 }
@@ -1173,7 +1207,7 @@ a:focus {
   margin-left: auto;
   margin-right: auto;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 1px 0 #d0d0d0;
   padding: 4px;
 }
