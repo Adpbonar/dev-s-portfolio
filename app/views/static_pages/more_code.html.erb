@@ -10,10 +10,11 @@
     <div class="col-sm-6">
       <div class=" more-code-show">
         <h4>A Deck of Cards</h4>
-        <p class="s-t">This Ruby program builds a deck of cards. It shuffles them and takes user input to determine how many
+        <p class="s-t">This Ruby program builds a deck of cards. It shuffles them and takes user input to determine how
+          many
           cards should be dealt into a hand.</p>
         <div class="more-code">
-<pre><code class="language-ruby">
+          <pre><code class="language-ruby">
   puts &quot;How many cards go into a hand for your game?&quot;
   hand_cards = gets.chomp.to_i
   message = &quot;Your #{hand_cards} hand has been dealt. Enjoy the game!&quot;
@@ -78,15 +79,15 @@
         </div>
       </div>
     </div>
-  <br />
-  <br />
-  <div class="col-sm-6">
-    <div class=" more-code-show">
-      <h4>The Fibonacci Sequence (2 ways)</h4>
-      <p class="s-t">This Ruby program calculates the Fibonacci Sequence in a recursive way and an iterative way.</p>
+    <br />
+    <br />
+    <div class="col-sm-6">
+      <div class=" more-code-show">
+        <h4>The Fibonacci Sequence (2 ways)</h4>
+        <p class="s-t">This Ruby program calculates the Fibonacci Sequence in a recursive way and an iterative way.</p>
 
-      <div class="more-code">
-<pre><code class="language-ruby">
+        <div class="more-code">
+          <pre><code class="language-ruby">
 # Recursive Fibonacci Sequence
   def recursive_fib(num)
     return  num if num <= 1  
@@ -116,7 +117,7 @@
   puts "Iterative Fibonacci Sequence"
   puts iterative_fib(num)
 </code></pre>
-      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -128,7 +129,7 @@
         <h4>The Luhn Algorithm</h4>
         <p class="s-t">This Ruby algorithm checks to see if a credit card number is valid.</p>
         <div class="more-code">
-<pre><code class="language-ruby">
+          <pre><code class="language-ruby">
   module Luhn
     def self.is_valid?(number)
       credit_card = []
@@ -158,15 +159,15 @@
         </div>
       </div>
     </div>
-  <br />
-  <br />
-  <div class="col-sm-6">
-    <div class=" more-code-show">
-      <h4>The Collatz Sequence</h4>
-      <p class="s-t">This Ruby program solves the Collatz Sequence.</p>
+    <br />
+    <br />
+    <div class="col-sm-6">
+      <div class=" more-code-show">
+        <h4>The Collatz Sequence</h4>
+        <p class="s-t">This Ruby program solves the Collatz Sequence.</p>
 
-      <div class="more-code">
-<pre><code class="language-ruby">
+        <div class="more-code">
+          <pre><code class="language-ruby">
   def collatz(n)
     sequence = []
     until n == 1
@@ -199,10 +200,91 @@
 
   iterator
 </code></pre>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class=" more-code-show">
+        <h4>Reversing a Linked List</h4>
+        <p class="s-t">This Ruby reverses a link list.</p>
+        <div class="more-code">
+          <pre><code class="language-ruby">
+  class LinkedListNode
+  attr_accessor :value, :next_node
+
+  def initialize(value, next_node=nil)
+    @value = value
+    @next_node = next_node
+  end
+end
+
+
+class Stack
+  attr_reader :data
+
+  def initialize
+      @data=nil
+  end
+
+  def push(value)
+     new_node = LinkedListNode.new(value, @data)
+     @data = new_node
+  end
+
+  def pop
+    unless list == nil
+      @data = data.next_node
+      return list.value
+    end
+  end
+end
+
+  def print_values(list_node)
+    if list_node
+      print &quot;#{list_node.value} --&gt; &quot;
+      print_values(list_node.next_node)
+    else
+      print &quot;nil\n&quot;
+      return
+    end
+  end
+
+  def reverse_list(list, previous=nil)
+    head = list.next_node
+    list.next_node = previous
+    if head
+      reverse_list(head, list)
+    else
+      list
+    end
+  end
+node1 = LinkedListNode.new(37)
+node2 = LinkedListNode.new(99, node1)
+node3 = LinkedListNode.new(12, node2)
+
+
+print_values(node3)
+
+puts &quot;-------&quot;
+
+revlist = reverse_list(node3)
+
+print_values(revlist)
+</code></pre>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="col-sm-6">
+      <div class=" more-code-show">
+    
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <br />
 <br />
