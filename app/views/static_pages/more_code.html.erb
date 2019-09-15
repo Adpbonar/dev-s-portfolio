@@ -156,6 +156,49 @@
   </div>
   <br class="clear" />
 </div>
+ <hr />
+  <br />
+  <div class=" more-code-show">
+    <h4>The Luhn Algorithm</h4>
+    <p class="s-t">This Ruby algorithm checks to see if a credit card number is valid.</p>
+    <div class="more-code">
+      <pre><code class="language-ruby">
+        def collatz(n)
+          sequence = []
+          until n == 1
+            if n % 2 != 0 
+                n = 3 * n + 1
+                sequence.push(n)
+              else
+                n = n/2
+                sequence.push(n)
+            end
+          end
+          return sequence
+        end
+
+        def iterator
+          counter = 1
+          longest_sequence = []
+          until counter == 1000000
+            seq = collatz(counter)
+            if seq.length &gt; current_longest_sequence.length
+              current_longest_sequence = seq
+              counter+=1
+            else
+              counter+=1
+            end
+          end
+            puts &quot;The tarting number is #{current_longest_sequence[0]} and the 
+            longest one is #{current_longest_sequence.length}&quot;
+        end
+
+        iterator
+      </code></pre>
+    </div>
+  </div>
+  <br class="clear" />
+</div>
 
 <br />
 <br />
