@@ -6,112 +6,156 @@
   <br />
   <div class=" more-code-show">
     <h4>A Deck of Cards</h4>
-      <p class="s-t">This Ruby program builds a deck of cards. It shuffles them and takes user input to determine how many cards should be dealt into a hand.</p>
+    <p class="s-t">This Ruby program builds a deck of cards. It shuffles them and takes user input to determine how many
+      cards should be dealt into a hand.</p>
     <div class="more-code">
-      <pre><code class="language-ruby">puts &quot;How many cards go into a hand for your game?&quot;
-      hand_cards = gets.chomp.to_i
-      message = &quot;Your #{hand_cards} hand has been dealt. Enjoy the game!&quot;
-      puts message
+      <pre><code class="language-ruby">
+        puts &quot;How many cards go into a hand for your game?&quot;
+        hand_cards = gets.chomp.to_i
+        message = &quot;Your #{hand_cards} hand has been dealt. Enjoy the game!&quot;
+        puts message
 
-      class Card
-        attr_accessor :rank, :suit
-        
-        def initialize(rank, suit)
-          @rank = rank
-          @suit = suit
-        end
+        class Card
+          attr_accessor :rank, :suit
+          
+          def initialize(rank, suit)
+            @rank = rank
+            @suit = suit
+          end
 
-        def card_dealt
-          if self.rank == 1
-            puts &quot;The Ace of #{self.suit}&quot;
-          elsif self.rank == 11
-            puts &quot;The Jack of #{self.suit}&quot;
-          elsif self.rank == 12
-            puts &quot;The Queen of #{self.suit}&quot;
-          elsif self.rank == 13
-            puts &quot;The King of #{self.suit}&quot;
-          else
-            puts &quot;The #{self.rank} of #{self.suit}&quot;
+          def card_dealt
+            if self.rank == 1
+              puts &quot;The Ace of #{self.suit}&quot;
+            elsif self.rank == 11
+              puts &quot;The Jack of #{self.suit}&quot;
+            elsif self.rank == 12
+              puts &quot;The Queen of #{self.suit}&quot;
+            elsif self.rank == 13
+              puts &quot;The King of #{self.suit}&quot;
+            else
+              puts &quot;The #{self.rank} of #{self.suit}&quot;
+            end
+          end
+
+          def self.random_card
+            Card.new(rand(1..13), :suit)  
           end
         end
 
-        def self.random_card
-          Card.new(rand(1..13), :suit)  
-        end
-      end
-
-      class Deck
-        def initialize
-          @rank = [*(1..13)]
-          @suit = [&quot;Clubs&quot;, &quot;Spades&quot;, &quot;Diamonds&quot;, &quot;Hearts&quot;]
-          @cards = []
-          @rank.each do |rank|
-            @suit.each do |suit|
-              @cards &lt;&lt; Card.new(rank, suit)
+        class Deck
+          def initialize
+            @rank = [*(1..13)]
+            @suit = [&quot;Clubs&quot;, &quot;Spades&quot;, &quot;Diamonds&quot;, &quot;Hearts&quot;]
+            @cards = []
+            @rank.each do |rank|
+              @suit.each do |suit|
+                @cards &lt;&lt; Card.new(rank, suit)
+              end
+            end
+          end
+          def shuffle
+            @cards.shuffle!
+          end
+          def card_dealt
+            @cards.each do |card|
+              card.card_dealt
+            end
+          end
+          def deal(hand_cards)
+            hand_cards.times do
+              @cards.shift.card_dealt
             end
           end
         end
-        def shuffle
-          @cards.shuffle!
-        end
-        def card_dealt
-          @cards.each do |card|
-            card.card_dealt
-          end
-        end
-        def deal(hand_cards)
-          hand_cards.times do
-            @cards.shift.card_dealt
-          end
-        end
-      end
-      deck = Deck.new
-      deck.shuffle
-      deck.deal(hand_cards)</code></pre>
+        deck = Deck.new
+        deck.shuffle
+        deck.deal(hand_cards)
+      </code></pre>
     </div>
   </div>
   <br class="clear" />
-<hr />
- <br />
+  <hr />
+  <br />
   <div class=" more-code-show">
     <h4>The Fibonacci Sequence (2 ways)</h4>
-      <p class="s-t">This Ruby program calculates the Fibonacci Sequence in a recursive way and an iterative way.</p>
+    <p class="s-t">This Ruby program calculates the Fibonacci Sequence in a recursive way and an iterative way.</p>
 
     <div class="more-code">
       <pre><code class="language-ruby"># Recursive Fibonacci Sequence
 
-def recursive_fib(num)
-  return  num if num <= 1  
-  recursive_fib(num - 1) + recursive_fib(num - 2)
-end 
+        def recursive_fib(num)
+          return  num if num <= 1  
+          recursive_fib(num - 1) + recursive_fib(num - 2)
+        end 
 
-#########################################################################
+        #########################################################################
 
-# Iterative Fibonacci Sequence
+        # Iterative Fibonacci Sequence
 
-def iterative_fib(num)
-  num1 = 0
-  num2 = 1
-  num.times do
-    x = num1 
-    num1 = num2
-    num2 = x + num2
-  end
-  return num1
-end
+        def iterative_fib(num)
+          num1 = 0
+          num2 = 1
+          num.times do
+            x = num1 
+            num1 = num2
+            num2 = x + num2
+          end
+          return num1
+        end
 
-puts choose a number...
-num = gets.chomp.to_i
-puts "Recursive Fibonacci Sequence"
-puts recursive_fib(num)
-puts "-----"
-puts "Iterative Fibonacci Sequence"
-puts iterative_fib(num)
-</code></pre>
+        puts choose a number...
+        num = gets.chomp.to_i
+        puts "Recursive Fibonacci Sequence"
+        puts recursive_fib(num)
+        puts "-----"
+        puts "Iterative Fibonacci Sequence"
+        puts iterative_fib(num)
+      </code></pre>
+    </div>
+  </div>
+  <hr />
+  <br />
+  <div class=" more-code-show">
+    <h4>The Luhn Algorithm</h4>
+    <p class="s-t">This Ruby algorithm checks to see if a credit card number is valid.</p>
+    <div class="more-code">
+      <pre><code class="language-ruby">
+        module Luhn
+          def self.is_valid?(number)
+            credit_card = []
+            # Access individual digits
+            check_num = number.to_s.split(&quot;&quot;)
+            # Reverse numbers and access index
+            check_num.reverse.each_with_index do |num, i|
+              # Convert variables to integers
+              num = num.to_i 
+              digit = digit.to_i
+              # Determine odd digit positions
+              unless (i.odd?)
+                credit_card &lt;&lt; num
+              else
+                # Double every other digit
+                digit = num * 2
+                credit_card &lt;&lt; digit unless digit &gt; 9 
+              end
+              # subtract 9 from digits with value of 10 or higher
+              credit_card &lt;&lt; digit - 9 if digit &gt; 9
+            end
+            # Determine divisibility of sum by 10 
+            return true if credit_card.sum % 10 == 0 else return false
+          end
+        end
+
+        if Luhn.is_valid?(377681478627336)
+          puts &quot;Approved :)&quot;
+        else
+          puts &quot;Declined :(&quot;
+        end
+      </code></pre>
     </div>
   </div>
   <br class="clear" />
-</div> 
+</div>
 
 <br />
 <br />
