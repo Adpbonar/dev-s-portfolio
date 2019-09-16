@@ -1242,17 +1242,23 @@ a:focus {
   .mobile {
     margin-left: auto !important;
     margin-right: auto !important;
+    text-align:center !important;
   }
-
+.mobile img {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
   .box p,
   h4 {
-    text-align: left !important;
+    text-align: center !important;
     padding-left: 2px;
     hyphens: auto;
   }
 
   .box img {
     max-height: 200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .box2 p,
