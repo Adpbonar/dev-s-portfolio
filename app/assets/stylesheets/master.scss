@@ -225,12 +225,16 @@ a {
   letter-spacing: 1.5px;
   opacity: 1;
 }
+.me img {
+  border-radius: 3px !important;
+}
 
 .me {
   height: 150px;
-  border-radius: 100%;
+  border-radius: 3px;
   border: 2px solid white;
   margin-top: 40px;
+  margin-bottom: 5px;
 }
 
 .about {
@@ -798,13 +802,6 @@ td {
   font-weight: bold;
 }
 
-.me {
-  height: 150px;
-  border-radius: 100%;
-  border: 2px solid white;
-  margin-top: 40px;
-}
-
 .about {
   margin-left: auto;
   margin-right: auto;
@@ -1134,15 +1131,16 @@ article p {
 }
 
 .about-text {
-  width: 90%;
+  width: 47.5;
   text-align: left !important;
   padding: 10px;
   margin: 0;
 }
-
 .about-photo {
   text-align: center;
-  width: 52%;
+  height: 390.55px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .more-code {
@@ -1165,6 +1163,12 @@ article p {
   width: 50%;
 }
 
+.mobile-about-text {
+  display: none !important;
+}
+.no-mobile-about-text {
+  display: block !important;
+}
 .about-formatter {
   margin: 0;
   margin-left: auto;
@@ -1227,10 +1231,17 @@ a:focus {
 @media (max-width: 768px) {
   .about-photo {
     width: 85% !important;
+    height: auto;
+  }
+
+  .mobile-about-photo {
+    display: none !important;
   }
 
   .about-text {
     width: 85% !important;
+    margin-left:auto;
+    margin-right:auto;
   }
 
   .box {
@@ -1338,4 +1349,10 @@ a:focus {
   .brand {
     display: none !important;
   }
+  .mobile-about-text {
+    display: block !important;
+  }
+  .no-mobile-about-text {
+    display: none !important;
+  }  
 }
