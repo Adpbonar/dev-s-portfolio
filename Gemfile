@@ -63,7 +63,7 @@ end
   gem "font-awesome-rails"
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
-  gem 'popper_js', '~> 1.11.1'
+  gem 'popper_js', '~> 1.14.5'
   gem 'bootstrap'
   gem 'simple_form'
   source 'https://rails-assets.org' do
