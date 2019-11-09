@@ -8,6 +8,6 @@ Built using Ruby 2.5.3 and Rails 5.2.3, my portfolio page is styled with CSS and
 <img src="https://docs.google.com/uc?id=12mKnh2tkdbwmwm6w6SoqkRBRMZxfvk_N" />
 <br />
 <br />
-<img src="https://docs.google.com/uc?id=1Ve5Frz55h2egvxssQ2QmGHLKYAUFh36_" style="text-align: center;" />
+<img src="https://docs.google.com/uc?id=1Ve5Frz55h2egvxssQ2QmGHLKYAUFh36_" style="margin-left: auto; margin-right: auto;" />
 <br />
 Check it out at: http://www.devanpotterbonar.com.
