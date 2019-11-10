@@ -1,4 +1,4 @@
-# README
+# Devan's Portfolio Page
 
 Built using Ruby 2.5.3 and Rails 5.2.3, my portfolio page is styled with CSS and Bootstrap and uses JavaScript to enhance some of the functionality. With built-in blog functionality, it makes managing my personal coding journey really easy.
 
