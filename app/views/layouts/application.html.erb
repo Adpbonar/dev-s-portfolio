@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/1ed4546683.js"></script>
     <%= favicon_link_tag asset_path('favcon.png') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -21,41 +22,8 @@
 
 <body>
   <%= render 'layouts/navigation'%>
-
-  <div class="footer" style="width: 100%;">
-    <% if user_signed_in? %>
-    <ul class="footer-bar">
-      <li style="display: inline;">
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-default', :stye => "padding: none;" %>
-      </li>
-      <li style="display: inline;">
-        <%= link_to "Create Article", new_article_path, class: 'btn btn-default', :stye => "padding: none;"  %>
-      </li>
-      <% else %>
-      <li>
-        <div></div>
-      </li>
-      <% end %>
-    </ul>
-    <center>
-      <div class="btn-group">
-        <a href="mailto:devan.potter.bonar@gmail.com" class="btn btn-default">
-          <i class="fas fa-envelope-square fa-2x"></i>
-        </a> 
-        <a target="_blank" href="https://github.com/Adpbonar" class="btn btn-default">
-          <i class="fab fa-github-square fa-2x"></i>
-        </a> 
-        <a target="_blank" href="https://www.linkedin.com/in/devanpotterbonar/" class="btn btn-default">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <%= link_to 'Contact me', contact_me_path,  class: 'btn btn-default' %>
-        <% if ! user_signed_in? %>
-            <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-default' %>
-        </center>
-        <% end %>
-    </div>
-  </div>
-
+  <%= render 'layouts/footer'%>
+ 
   <button onclick="topFunction()" id="topbtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
   <script>
     window.onscroll = function () {
