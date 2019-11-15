@@ -53,11 +53,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "font-awesome-rails"
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-gem 'popper_js', '~> 1.14.5'
-gem 'bootstrap'
 gem 'simple_form'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

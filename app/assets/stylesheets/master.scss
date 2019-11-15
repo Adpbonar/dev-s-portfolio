@@ -1,6 +1,3 @@
-@import "bootstrap";
-@import "font-awesome";
-
 body {
   background: image_url('lubo-minar-t4DhcQddCnA-unsplash.jpg') center;
   font-family: 'PT Sans', sans-serif;
@@ -501,7 +498,7 @@ topbtn:focus {
 .btn-default {
   background-color: none;
   font-weight: bolder;
-  color: rgb(223, 217, 217);
+  color: rgb(223, 217, 217) !important;
   font-family: 'Raleway', sans-serif;
   display: inline;
   vertical-align: middle;
@@ -519,6 +516,10 @@ topbtn:focus {
   color: whitesmoke;
   outline: none !important;
   box-shadow: none;
+}
+
+.white-border {
+  border: 1px solid white !important;
 }
 
 .about-more a {
@@ -621,16 +622,6 @@ li.dropdown.open .dropdown-menu {
 .connect {
   color: whitesmoke;
   font-weight: bold;
-}
-
-.nav {
-  margin-top: 0;
-  width: 100%;
-  background-color: #d7d7d7;
-  background-image: linear-gradient(150deg, #353535 74%, #d7d7d7 0%);
-  border-bottom: 2px solid rgb(165, 162, 162);
-  z-index: 500;
-  border-radius: 2px;
 }
 
 .cvbtn {
@@ -993,14 +984,6 @@ a:focus {
   font-weight: bold;
 }
 
-.nav {
-  margin-top: 0;
-  width: 100%;
-  background-color: #695460;
-  border-bottom: 2px solid rgb(165, 162, 162);
-  z-index: 500;
-  font-size: 20px;
-}
 
 .back:hover,
 .back:focus {
@@ -1199,9 +1182,10 @@ article p {
 .contact-menu-link {
   background-color: #293749;
   padding: 2px;
-  border-bottom: 1px dotted silver;
+  border-bottom: 1px dotted #d7d7d7;
   font-weight: bold;
   letter-spacing: 2px;
+  border-top: 1px solid #d7d7d7;
 }
 
 .contact-menu-link a {
