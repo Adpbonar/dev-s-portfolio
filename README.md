@@ -1,13 +1,24 @@
-# Devan's Portfolio Page
+# README
 
-Built using Ruby 2.5.3 and Rails 5.2.3, my portfolio page is styled with CSS and Bootstrap and uses JavaScript to enhance some of the functionality. With built-in blog functionality, it makes managing my personal coding journey really easy.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-<img src="https://docs.google.com/uc?id=13W1E_8Jkz-BTmQ5JgOB81w1ofX6ZBhpi" />
-<br />
-<br />
-<img src="https://docs.google.com/uc?id=12mKnh2tkdbwmwm6w6SoqkRBRMZxfvk_N" />
-<br />
-<br />
-<img src="https://docs.google.com/uc?id=1Ve5Frz55h2egvxssQ2QmGHLKYAUFh36_" />
-<br />
-Check it out at: http://www.devanpotterbonar.com.
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

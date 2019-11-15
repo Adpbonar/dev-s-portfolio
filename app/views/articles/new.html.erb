@@ -1,5 +1,5 @@
-   <%# <%= tinymce_assets %>
 
+<div class="page-content"
 <h1>Create an Article</h1>
 <div class="col-10 offset-1">
   <%= simple_form_for(@article) do |f| %>
@@ -12,11 +12,12 @@
       <%= f.text_area :snippet, :class => "tinymce", placeholder: "Write a snippet.", :rows => 10, :cols => 120 %>
       <br class="clear" />
       <%= f.text_area :post, :class => "tinymce", placeholder: "Write a post.", :rows => 40, :cols => 120 %>
-      <%# <br /> <%= tinymce %>
+      <br />
       <%= f.submit %>
       </p>
       <% end %>
     </div>
+  </div>
   </div>
   <br class="clear" />
   <br />
