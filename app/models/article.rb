@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   belongs_to :user
+  has_rich_text :post
   extend FriendlyId
   friendly_id :title, use: :slugged
   validates :title, presence: true, length: { minimum: 3, maximum: 50 }

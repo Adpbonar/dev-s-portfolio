@@ -1,21 +1,19 @@
-<center>
   <div class="col-10 offset-1">
     <%= simple_form_for(@article) do |f| %>
-    <div align="right"><%= f.input :published, as: :radio_buttons, label: 'Publish Now?' %></div>
+    <div class="text-right"><%= f.input :published, as: :radio_buttons, label: 'Publish Now?' %></div>
     <%= f.input :scheduled_for, label: 'Schedule post' %>
     <center><%= f.input :title, class: 'form' %></center><br class="clear" /><br />
     <br />
-    <div align="center">
-      <%= f.text_area :snippet, :class => "tinymce", label: 'Update Snippet', :rows => 10, :cols => 120 %>
-      <br class="clear" />
-      <%= f.text_area :post, :class => "tinymce", label: 'Update Post', :rows => 40, :cols => 120 %>
+    
+    <%= f.text_area :snippet, placeholder: "update snippet.", :rows => 10, :cols => 145 %>
+    <br /><br />
+    <%= f.rich_text_area :post, placeholder: "Update post." %>
       <br />
       <%= f.submit class: 'btn btn-success' %>
       </p>
       <% end %>
     </div>
   </div>
-</center>
   <br class="clear" />
   <br />
   <br />
