@@ -13,7 +13,7 @@
     <br />
     <center><p class="date-text"><%= @article.scheduled_for.strftime("%B %d, %Y").upcase %></center>
     <hr>
-    <div class="post"><%= @article.post.html_safe %></div>
+    <div class="post"><%= @article.post %></div>
     <br />
     <% if current_user && current_user == @article.user %>
       <%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %> |
