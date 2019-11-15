@@ -58,6 +58,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 gem 'devise'
-gem 'prism-rails'
 gem 'friendly_id', '~> 5.2.4'
 gem "mini_magick"

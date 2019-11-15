@@ -10,10 +10,11 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'prism', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <% if notice.present? %>
+<% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
