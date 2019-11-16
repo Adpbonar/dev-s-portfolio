@@ -46,13 +46,6 @@ ActiveRecord::Schema.define(version: 2019_11_16_184414) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "apps", force: :cascade do |t|
-    t.string "title"
-    t.string "versions"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "snippet"
