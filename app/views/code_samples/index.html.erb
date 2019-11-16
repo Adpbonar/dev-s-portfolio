@@ -21,9 +21,7 @@
           <td><%= code_sample.title %></td>
           <td><%= code_sample.versions %></td>
           <td><%= code_sample.code %></td>
-          <td><%= link_to 'Show', code_sample %></td>
-          <td><%= link_to 'Edit', edit_code_sample_path(code_sample) %></td>
-          <td><%= link_to 'Destroy', code_sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', code_sample, class: 'more' %></td>
         </tr>
       <% end %>
     </tbody>

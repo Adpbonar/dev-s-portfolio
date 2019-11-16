@@ -83,8 +83,6 @@ class ArticlesController < ApplicationController
       if @article.draft == false 
         if @article.scheduled_for >= Time.now
           @article.update(published: true)
-        else
-          @article.update(published: false)
         end
       end
     end

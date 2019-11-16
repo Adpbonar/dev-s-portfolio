@@ -24,7 +24,7 @@ class CodeSamplesController < ApplicationController
   # POST /code_samples
   # POST /code_samples.json
   def create
-    @code_sample = CodeSample.new(code_sample_params)
+    @code_sample = current_user.code_samples.new(code_sample_params)
 
     respond_to do |format|
       if @code_sample.save
