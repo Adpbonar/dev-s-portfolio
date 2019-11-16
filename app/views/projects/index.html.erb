@@ -1,28 +1,35 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 <br />
-<section class="page-content">
+<br />
+<div class="row project-text">
   <h1 class="text-center">Projects</h1>
-
-  <table class="text-center">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Versions</th>
-        <th>Image</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @projects.each do |project| %>
-        <tr>
-          <td><%= project.title %></td>
-          <td><%= project.versions %></td>
-          <td><%= image_tag project.project_image, class: 'index-image' %></td>
-          <td><%= link_to 'details'.upcase, project, class: 'more' %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</section>
+</div>
+  <% @projects.each do |project| %>
+    <div class="row project-text">
+      <div class="col-sm-3">
+        <h2><%= project.title %></h2>
+      </div>
+      <div class="col-sm-3">
+        <%= project.versions %>
+      </div>
+      <div class="col-sm-3">
+        <%= image_tag project.project_image, class: 'project-index-image' %>
+      </div>
+      <div class="col-sm-3">
+        <%= link_to 'details'.upcase, project, class: 'more' %>
+      </div>
+    </div>
+  <% end %>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <style>
+  body {
+  overflow-x: hidden !important;
+  }
+  </style>
   

@@ -195,22 +195,28 @@ end
 
       <br class="clear" />
       <br class="clear" />
-      <p class="more"><%= link_to' See more code?', more_code_path %></p>
+      <center><p class="more"><%= link_to' See more code?', more_code_path %></p></center>
       <br />
       <h3 id="web-apps" class="index-heder">Web Apps</h3>
       <div class="row">
-        <% @projects.each do |project| %>
+      <% @projects.each do |project| %>
+        
           <% if project.featured %>
-            <div class="col-sm-6 box">
+            <div class="col-sm-5 box">
               <h4 class="text-center"><%= project.title %></h4>
               <%= image_tag project.project_image, class: 'project-index-image' %>
               <p><%= project.description %></p>
             </div
-          <% end %>
-        <% end %>
+          <% end %>  
+          <br class="clear">      
+      <% end %>
+      
       </div>
+
+   
+      
       <br class="clear" /><br />
-      <p class="more"><%= link_to 'See more projects?', more_apps_path %></p>
+      <center><p class="more"><%= link_to 'See more projects?', more_apps_path %></p></center>
       <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
       <br />
       <div>
