@@ -1,20 +1,36 @@
 
 <div class="page-content"
-<h1>Create an Article</h1>
-<div class="col-10 offset-1">
-  <%= simple_form_for(@article) do |f| %>
-    <%= f.input :published, as: :radio_buttons, label: 'Publish Now?' %>
+  <h1>Create an Article</h1>
+    <div class="col-10 offset-1">
+      <%= simple_form_for(@article) do |f| %>
+        <br />
+        <table class="form-table" style="width: 100%"">
+          <tbody>
+            <tr>
+              <td>
+                <%= f.input :featured, label: 'Feature on homepage?' %>
+              </td>
+              <td>
+                <%= f.input :draft, label: 'Draft?' %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <%= f.input :scheduled_for, class: 'form' %>
+        <br />
+        <%= f.input :title, class: 'form' %>
+        <br />
+        <%= f.text_area :snippet, placeholder: "Write a snippet.", :rows => 10, :cols => 145 %>
+        <br /><br />
+        <%= f.rich_text_area :post, placeholder: "Write a post." %>
+        <br />
+        <div class="text-center">
+          <%= f.input :featured, as: :radio_buttons, label: 'Featured?' %>
+          <%= f.submit class: 'btn btn-success' %>
+        </div>
+      <% end %>
+    </div>
     <br />
-    <center><%= f.input :title, class: 'form' %></center><br class="clear" /><br />
-    <br />
-    <%= f.text_area :snippet, placeholder: "Write a snippet.", :rows => 10, :cols => 145 %>
-    <br /><br />
-    <%= f.rich_text_area :post, placeholder: "Write a post." %>
-    <br />
-    <%= f.submit class: 'btn btn-success' %>
-    </p>
-    <% end %>
-  </div>
   </div>
   <br class="clear" />
   <br />

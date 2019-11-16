@@ -7,17 +7,18 @@
   <hr class="cme-r-a">
   <br />
   <% @articles.each do |article| %>
-    <div class="col-xs-8 col-xs-offset-2">
-      <h2 class="post-title"><%= article.title %></h2>
-      <center>
-        <p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y").upcase %>
-      </center>
-      <% if article.published || current_user && current_user == article.user %>
-        <% unless article.published %>
-          <h5 style="color: red;">DRAFT</h5>
-        <% end %>
-    </div>
-    <cener>
+    <% if article.featured %>
+      <div class="col-xs-8 col-xs-offset-2">
+        <h2 class="post-title"><%= article.title %></h2>
+        <center>
+          <p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y").upcase %>
+        </center>
+        <% if article.published || current_user && current_user == article.user %>
+          <% unless article.published %>
+            <h5 style="color: red;">DRAFT</h5>
+          <% end %>
+      </div>
+      <cener>
       <div class="article-body">
         <p class="post"><%= article.snippet %>...</p>
         <br />
@@ -26,6 +27,7 @@
         <br />
         <% end %>
         <% end%>
+        <% end %>
       </div>
     </div>
   </center>

@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
   
     def index
       @articles = Article.all
@@ -11,13 +12,12 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.create(article_params)
-    created = @article.created_at
-    @article.scheduled_for = created
     if @article.save
-      if @article != @article.published
-        redirect_to edit_article_path(@article)
+      if @article.article_posted == true
+        flash[:notice] = "Article was successfully scheduled"
+        redirect_to article_path(@article)
       else
-        flash[:notice] = "Article was successfully created"
+        flash[:notice] = "Article was successfully published"
         redirect_to article_path(@article)
       end
     else
@@ -26,14 +26,17 @@ class ArticlesController < ApplicationController
   end
   
   def show
-    @article = Article.friendly.find(params[:id])
   end
 
   def update
-    @article = Article.friendly.find(params[:id])
     if @article.update(article_params)
-     flash[:success] = "Article was updated"
-     redirect_to article_path(@article)
+      if @article.draft == true
+        @article.update(published: false)
+      else
+        @article.update(published: true)
+      end
+      flash[:notice] = "Article was successfully updated"
+      redirect_to article_path(@article)
     else
      flash[:success] = "Article was not updated"
      render 'edit'
@@ -48,7 +51,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.friendly.find(params[:id])
     if @article.user != current_user
       return render plain: "Not Allowed", status: :forbidden
     end
@@ -60,14 +62,10 @@ class ArticlesController < ApplicationController
   private 
 
   def article_params
-    params.require(:article).permit(:title, :snippet, :post, :published, :scheduled_for)
+    params.require(:article).permit(:title, :snippet, :post, :published, :scheduled_for, :featured, :draft)
   end
 
-  def schedule_to_publish
+  def set_article
     @article = Article.friendly.find(params[:id])
-    @publish = @article.published
-    if Time.now.to_s >= @article.scheduled_for
-      return !@article.publish
-    end
   end
 end

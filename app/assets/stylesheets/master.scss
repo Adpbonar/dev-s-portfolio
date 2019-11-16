@@ -222,6 +222,7 @@ a {
   letter-spacing: 1.5px;
   opacity: 1;
 }
+
 .me img {
   border-radius: 3px !important;
 }
@@ -483,6 +484,21 @@ topbtn:focus {
   max-width: 88%;
   border-radius: 4px;
   opacity: .7;
+}
+
+.form-table {
+  text-align: center;
+}
+
+.form-check-label {
+  color: black !important;
+  font-size: 12px !important;
+}
+
+
+.col-form-label {
+  color: black !important;
+  font-size: 12px !important;
 }
 
 .sign-in {
@@ -1119,6 +1135,7 @@ article p {
   padding: 10px;
   margin: 0;
 }
+
 .about-photo {
   text-align: center;
   height: 390.55px;
@@ -1149,9 +1166,11 @@ article p {
 .mobile-about-text {
   display: none !important;
 }
+
 .no-mobile-about-text {
   display: block !important;
 }
+
 .about-formatter {
   margin: 0;
   margin-left: auto;
@@ -1228,8 +1247,8 @@ a:focus {
 
   .about-text {
     width: 85% !important;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .box {
@@ -1241,12 +1260,14 @@ a:focus {
   .mobile {
     margin-left: auto !important;
     margin-right: auto !important;
-    text-align:center !important;
+    text-align: center !important;
   }
-.mobile img {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+
+  .mobile img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   .box p,
   h4 {
     text-align: center !important;
@@ -1337,10 +1358,12 @@ a:focus {
   .brand {
     display: none !important;
   }
+
   .mobile-about-text {
     display: block !important;
   }
+
   .no-mobile-about-text {
     display: none !important;
-  }  
+  }
 }
