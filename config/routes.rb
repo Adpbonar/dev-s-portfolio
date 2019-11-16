@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :code_samples
   resources :projects
   resources :articles
   devise_for :users

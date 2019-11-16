@@ -198,68 +198,19 @@ end
       <p class="more"><%= link_to' See more code?', more_code_path %></p>
       <br />
       <h3 id="web-apps" class="index-heder">Web Apps</h3>
-
-      <div class="box">
-        <h4>Quote Generator</h4>
-        <a target="_blank"
-          href="https://splurty-devan-potterbonar.herokuapp.com/"><%= image_tag 'splurty.png', class: 'full-width', alt: "Splurty app screenshot" %></a>
-        <p> A database-powered quote generator, using the Ruby on Rails framework.
-          Uses Git and GitHub for version control, and launched on Heroku.</p>
+      <div class="row">
+        <% @projects.each do |project| %>
+          <% if project.featured %>
+            <div class="col-sm-6 box">
+              <h4 class="text-center"><%= project.title %></h4>
+              <%= image_tag project.project_image, class: 'project-index-image' %>
+              <p><%= project.description %></p>
+            </div
+          <% end %>
+        <% end %>
       </div>
-      <div class="box">
-        <h4>Yelp Clone</h4>
-        <a target="_blank"
-          href="https://nomster-devan-potterbonar.herokuapp.com/"><%= image_tag 'nomster.png', class: 'full-width', alt: "Nomster app screenshot" %></a>
-        <p>
-          A Yelp clone that integrates with the Google Maps and Geocoder APIs.
-          It includes features like user comments, star ratings,
-          image uploading, and user authentication.
-        </p>
       </div>
-      <br class="clear" />
-      <div class="mobile">
-        <div class="box">
-          <h4>Two-Sided Market Place</h4>
-          <a target="_blank"
-            href="https://flixter-devan-potterbonar.herokuapp.com/"><%= image_tag 'flixter.png', class: 'full-width', alt: "Flixter app screenshot" %></a>
-          <p>
-            A two-sided, video-streaming marketplace platform that
-            features credit card payment capabilities. It also includes user role
-            management, complex user interfaces, and advanced
-            database relationships.
-          </p>
-        </div>
-        <div class="box">
-          <h4>Test Driven Development</h4>
-          <a target="_blank"
-            href="https://inpic-devan-potter-bonar.herokuapp.com/"><%= image_tag 'grammable.png', class: 'full-width', alt: "InPic app screenshot" %></a>
-          <p>
-            A simple Instagram clone that was built using industry-standard, test driven
-            development (following numerous red/green/refactor cycles).
-          </p>
-        </div>
-        <br class="clear" />
-        <div class="box">
-          <h4>Single Page To-do Application</h4>
-          <a target="_blank"
-            href="https://todolist-devanpotterbonar.herokuapp.com/"><%= image_tag 'todoster.png', class: 'full-width', alt: "Todo List app screenshot" %></a>
-          <p>
-            This single page to-do application features a
-            fluid user interface. By using JavaScript users can rapidly add dynamic content.
-          </p>
-        </div>
-        <div class="box">
-          <h4>Agile Team Project</h4>
-           <a target="_blank"
-            href="https://toad-chesster.herokuapp.com/"><%= image_tag 'chess.png', alt: "Chess app screenshot", class: 'full-width' %></a>
-          <p>
-            Worked on an Agile software development team building
-            a chess application. Under the guidance of a senior software engineer,
-            we had weekly Agile team meetings for code reviews, sprint planning,
-            and feature assignments.
-          </p>
-        </div>
-      </div>
+      
       <br class="clear" /><br />
       <p class="more"><%= link_to 'See more projects?', more_apps_path %></p>
       <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
