@@ -1,0 +1,35 @@
+<% if notice.present? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+<br />
+<section class="page-content">
+  <br />
+  <h1 class="text-center">
+    <%= @project.title %>
+  </h1>
+  <br />
+  <p>
+    <strong>Versions:</strong>
+    <%= @code_sample.versions %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @code_sample.description %>
+  </p>
+
+  <p>
+    <strong>Code:</strong>
+    <%= @code_sample.code %>
+  </p>
+
+  <p>
+    <strong>Featured:</strong>
+    <%= @code_sample.featured %>
+  </p>
+  <% if current_user && current_user == @project.user %>
+    <%= link_to 'Edit', edit_code_sample_path(@code_sample) %> |
+    <%= link_to 'Back', code_samples_path %>
+  <% end %>
+  <br />
+</section

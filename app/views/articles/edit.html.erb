@@ -1,10 +1,14 @@
-<div class="page-content"
-<h1>Edit Article</h1>
-<%= render 'form' %>
-</div
-<center>
-<%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
-<%= link_to 'Back', articles_path %>
- </center>
+<br />
+<div class="page-content">
+  <h1>Edit Article</h1>
+  <%= render 'form' %>
+  </div
+  <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
+  <%= link_to 'Back', articles_path %>
+</section>
+<br />
+<br />
+<br />
+<br />
 
 

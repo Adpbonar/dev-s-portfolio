@@ -4,4 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :rememberable, :validatable
   has_many :articles
   has_many :projects
+  has_many :code_samples
 end

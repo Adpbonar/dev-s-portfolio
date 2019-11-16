@@ -395,6 +395,10 @@ p {
   font-size: 13px;
 }
 
+.nav-item {
+  padding: 4px;
+}
+
 .nav-link {
   font-family: 'Anton', sans-serif;
   text-shadow: 2px 2px black;
@@ -492,6 +496,10 @@ topbtn:focus {
 
 .index-image {
   height: 100px;
+}
+
+.project-index-image {
+  width: 100%;
 }
 
 .image {
@@ -1248,6 +1256,8 @@ article p {
   font-weight: bold;
   letter-spacing: 2px;
   border-top: 1px solid #d7d7d7;
+  letter-spacing: 3px;
+  text-shadow: 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 1px 1px 1px;
 }
 
 .contact-menu-link a {

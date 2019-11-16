@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 
   def index
     @articles = Article.all
+    @projects = Project.all
   end
   def about
   end
