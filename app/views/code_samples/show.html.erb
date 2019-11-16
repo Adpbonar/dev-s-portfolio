@@ -5,7 +5,7 @@
 <section class="page-content">
   <br />
   <h1 class="text-center">
-    <%= @project.title %>
+    <%= @code_sample.title %>
   </h1>
   <br />
   <p>
@@ -23,13 +23,10 @@
     <%= @code_sample.code %>
   </p>
 
-  <p>
-    <strong>Featured:</strong>
-    <%= @code_sample.featured %>
-  </p>
-  <% if current_user && current_user == @project.user %>
+  <% if current_user && current_user == @code_sample.user %>
     <%= link_to 'Edit', edit_code_sample_path(@code_sample) %> |
-    <%= link_to 'Back', code_samples_path %>
+    <%= link_to 'Back', code_samples_path %> | 
+    <%= link_to "Delete", code_sample_path(@code_sample), method: :delete, data: { confirm: "Are you sure you want to delete this article?"} %>
   <% end %>
   <br />
 </section
