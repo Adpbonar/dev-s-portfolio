@@ -11,14 +11,19 @@ class Article < ApplicationRecord
 
 
   def article_posted
-    if (Time.now >= self.scheduled_for) && (self.published == false)
+    if (Time.now >= self.scheduled_for) && (self.draft == false)
       self.update(published: true)
       return true
-    elsif (Time.now < self.scheduled_for) && (self.published == false)
-      return false
     elsif self.draft == true
       self.update(published: false)
       return false
+    end
+  end
+
+  def article_post_scheduled
+    if (Time.now < self.scheduled_for) && (self.draft == "false")
+      self.update(published: false)
+      return true
     end
   end
 end
