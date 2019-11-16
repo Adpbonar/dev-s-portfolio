@@ -1,19 +1,33 @@
   <div class="col-10 offset-1">
-    <%= simple_form_for(@article) do |f| %>
-    <div class="text-right"><%= f.input :published, as: :radio_buttons, label: 'Publish Now?' %></div>
-    <%= f.input :scheduled_for, label: 'Schedule post' %>
-    <center><%= f.input :title, class: 'form' %></center><br class="clear" /><br />
+  <%= simple_form_for(@article) do |f| %>
+    <br/>
+    <table class="form-table" style="width: 100%"">
+      <tbody>
+        <tr>
+          <td>
+            <%= f.input :featured, label: 'Feature on homepage?', as: :radio_buttons %>
+          </td>
+          <td>
+            <%= f.input :draft, label: 'Draft?', as: :radio_buttons %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <%= f.input :title, class: 'form' %>
     <br />
-    
-    <%= f.text_area :snippet, placeholder: "update snippet.", :rows => 10, :cols => 145 %>
+    <%= f.input :scheduled_for, label: 'Schedule your unpublished post:', class: 'form' %>
+    <br />
+    <%= f.text_area :snippet, placeholder: "Update snippet.", :rows => 10, :cols => 145 %>
     <br /><br />
     <%= f.rich_text_area :post, placeholder: "Update post." %>
-      <br />
+    <br />
+    <div class="text-center">
       <%= f.submit class: 'btn btn-success' %>
-      </p>
-      <% end %>
     </div>
-  </div>
+  <% end %>
+</div>
+<br />
+</div>
   <br class="clear" />
   <br />
   <br />
