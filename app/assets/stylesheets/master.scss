@@ -486,6 +486,18 @@ topbtn:focus {
   opacity: .7;
 }
 
+.project {
+ text-align: center;
+}
+
+.index-image {
+  height: 100px;
+}
+
+.image {
+  width: 70%;
+}
+
 .draft-border {
   border: 2px dashed red;
 }
@@ -581,8 +593,30 @@ topbtn:focus {
   display: inline !important;
 }
 
+.more {
+  color: rgb(158, 121, 28) !important;
+  background: none;
+  text-align: center;
+  font-weight: bold;
+  padding: 4px;
+  font-size: 15px;
+  outline: none;
+  text-decoration: none;
+  display: inline !important;
+}
+
+
 .more a:hover,
 .more a:focus {
+  color: navy !important;
+  outline: none;
+  text-decoration: none;
+  border-bottom: 1px solid navy;
+}
+
+
+.more:hover,
+.more:focus {
   color: navy !important;
   outline: none;
   text-decoration: none;

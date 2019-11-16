@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<br />
+<section class="page-content">
+  <h1 class="text-center">Projects</h1>
+
+  <table class="text-center">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Versions</th>
+        <th>Image</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.title %></td>
+          <td><%= project.versions %></td>
+          <td><%= image_tag project.project_image, class: 'index-image' %></td>
+          <td><%= link_to 'details'.upcase, project, class: 'more' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
+  

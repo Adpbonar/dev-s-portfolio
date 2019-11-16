@@ -1,0 +1,34 @@
+<% if notice.present? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+<br />
+<section class="page-content">
+<br />
+<h1 class="text-center">
+  <%= @project.title %>
+</h1>
+<br />
+<div class="project">
+  <%= image_tag @project.project_image, class: 'image' %>
+</div>
+<br />
+<p>
+  <strong>Versions:</strong>
+  <%= @project.versions %>
+</p>
+
+<p>
+  <strong>Project Information:</strong>
+  <%= @project.project_info %>
+</p>
+<br />
+<% if current_user && current_user == @project.user %>
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to 'Back', projects_path %>
+<% end %>
+<br />
+</section>
+<br /> 
+<br />
+<br />
+<br />
