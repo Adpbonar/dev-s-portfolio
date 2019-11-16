@@ -8,10 +8,10 @@
           <tbody>
             <tr>
               <td>
-                <%= f.input :featured, label: 'Feature on homepage?' %>
+                <%= f.input :featured, label: 'Feature on homepage?', as: :radio_buttons %>
               </td>
               <td>
-                <%= f.input :draft, label: 'Draft?' %>
+                <%= f.input :draft, label: 'Draft?', as: :radio_buttons %>
               </td>
             </tr>
           </tbody>
@@ -25,7 +25,6 @@
         <%= f.rich_text_area :post, placeholder: "Write a post." %>
         <br />
         <div class="text-center">
-          <%= f.input :featured, as: :radio_buttons, label: 'Featured?' %>
           <%= f.submit class: 'btn btn-success' %>
         </div>
       <% end %>

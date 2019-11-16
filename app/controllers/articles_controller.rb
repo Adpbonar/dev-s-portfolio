@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :article_publish, only: [:show, :edit, :update, :destroy]
   
     def index
       @articles = Article.all
@@ -16,12 +17,13 @@ class ArticlesController < ApplicationController
       if @article.article_posted == true
         flash[:notice] = "Article was successfully scheduled"
         redirect_to article_path(@article)
-      else
-        flash[:notice] = "Article was successfully published"
+      elsif @article.article_posted == false
+        flash[:notice] = "Article was successfully created as a draft"
         redirect_to article_path(@article)
+      else 
+        flash[:success] = "Article was not created"
+        render 'edit'
       end
-    else
-     render 'new'
     end
   end
   
@@ -32,8 +34,6 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       if @article.draft == true
         @article.update(published: false)
-      else
-        @article.update(published: true)
       end
       flash[:notice] = "Article was successfully updated"
       redirect_to article_path(@article)
@@ -67,5 +67,11 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.friendly.find(params[:id])
+  end
+
+  def article_publish
+    if  (@article.draft == false) && (@article.scheduled_for <= Time.now)
+      @article.update(published: true)
+    end
   end
 end

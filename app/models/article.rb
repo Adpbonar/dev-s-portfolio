@@ -14,6 +14,8 @@ class Article < ApplicationRecord
     if (Time.now >= self.scheduled_for) && (self.published == false)
       self.update(published: true)
       return true
+    elsif (Time.now < self.scheduled_for) && (self.published == false)
+      return false
     elsif self.draft == true
       self.update(published: false)
       return false
