@@ -284,23 +284,32 @@ end
             <h1 class="text-center">Read About My Code</h1>
             <br />
             <% @articles.each do |article| %>
+            
             <div class="well well-lg">
-              <% if article.published || current_user && current_user == article.user %>
-              <% unless article.published %>
-              <h4 style="color: red;">DRAFT</h4>
+              <% if article.featured %>
+                <% if article.published || current_user && current_user == article.user %>
+                  <% if ! article.published %>
+                    <div class="draft-border">
+                      <h4 class="draft">DRAFT</h4>
+                      <div class="blog-title text-center">
+                        <%= link_to article.title, article_path(article) %><br />
+                        <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
+                      </div>
+                    </div>
+                <% else %>
+                  <div class="blog-title text-center">
+                    <%= link_to article.title, article_path(article) %><br />
+                    <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
+                  </div>
+                </div>
+                <% end %>
               <% end %>
-              <div class="blog-title">
-                <%= link_to article.title, article_path(article) %><br />
-                <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
-              </div>
-
+              <% end %>
+              <% end %>
             </div>
-            <% end %>
-            <% end %>
           </div>
+          <br class="clear" />
         </div>
-        <br class="clear" />
-      </div>
     </div>
     <br />
     <br />

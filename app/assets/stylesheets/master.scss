@@ -486,6 +486,15 @@ topbtn:focus {
   opacity: .7;
 }
 
+.draft-border {
+  border: 2px dashed red;
+}
+.draft {
+  color: red;
+  text-decoration: underline;
+  text-shadow: 1px 1px 0 #A5CECC, 1px -1px 0 #A5CECC, -1px 1px 0 #A5CECC, -1px -1px 0 #A5CECC, 1px 0px 0 #A5CECC, 0px 1px 0 #A5CECC, -1px 0px 0 #A5CECC, 0px -1px 0 #A5CECC;
+}
+
 .form-table {
   text-align: center;
 }

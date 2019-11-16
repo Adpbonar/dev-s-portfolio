@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :article_publish, only: [:show, :edit, :update, :destroy]
+  before_action :article_publish
+  before_action :drafts
   
     def index
       @articles = Article.all
@@ -15,14 +16,17 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.create(article_params)
     if @article.save
       if @article.article_posted == true
-        flash[:notice] = "Article was successfully scheduled"
-        redirect_to article_path(@article)
-      elsif @article.article_posted == false
+        flash[:notice] = "Article was successfully published"
+        redirect_to root_path
+      elsif @article.article_posted == "false"
         flash[:notice] = "Article was successfully created as a draft"
-        redirect_to article_path(@article)
+        redirect_to root_path
+      elsif @article.article_post_scheduled == true
+        flash[:notice] = "Article was successfully scheduled"
+        redirect_to root_path
       else 
         flash[:success] = "Article was not created"
-        render 'edit'
+        render 'new'
       end
     end
   end
@@ -32,14 +36,19 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      if @article.draft == true
-        @article.update(published: false)
+      if @article.article_posted == true
+        flash[:notice] = "Article was successfully published"
+        redirect_to root_path
+      elsif @article.article_posted == "false"
+        flash[:notice] = "Article was successfully created as a draft"
+        redirect_to root_path
+      elsif @article.article_post_scheduled == true
+        flash[:notice] = "Article was successfully scheduled"
+        redirect_to root_path
+      else
+        flash[:success] = "Article was not updated"
+        render 'edit'
       end
-      flash[:notice] = "Article was successfully updated"
-      redirect_to article_path(@article)
-    else
-     flash[:success] = "Article was not updated"
-     render 'edit'
     end
   end
 
@@ -56,7 +65,7 @@ class ArticlesController < ApplicationController
     end
     flash[:success] = "Article was deleted"
     @article.destroy
-    redirect_to articles_path
+    redirect_to root_path
   end
   
   private 
@@ -70,8 +79,22 @@ class ArticlesController < ApplicationController
   end
 
   def article_publish
-    if  (@article.draft == false) && (@article.scheduled_for <= Time.now)
-      @article.update(published: true)
+    if @article.present?
+      if @article.draft == false 
+        if @article.scheduled_for >= Time.now
+          @article.update(published: true)
+        else
+          @article.update(published: false)
+        end
+      end
+    end
+  end
+
+  def drafts
+    if @article.present?
+      if @article.draft == true
+        @article.update(published: false)
+      end
     end
   end
 end
