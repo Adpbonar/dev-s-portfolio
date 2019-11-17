@@ -5,10 +5,13 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
+    <%= f.input :GitHub_link %>
     <%= f.input :versions %>
     <%= f.input :description, label: 'Description (for Featured Projects)' %>
+    <br />
     <%= f.rich_text_area :project_info, class: 'text-left' %>
-    <table class="form-table" style="width: 100%"">
+    <br />
+    <table class="form-table" style="width: 100%">
       <tbody>
         <tr>
           <td class="text-left">
@@ -16,6 +19,8 @@
           </td>
           <td>
             <%= f.input :featured, label: 'Feature on homepage?', as: :radio_buttons %>
+          <td>
+            <%= f.input :coming_soon, label: 'Coming Soon?', as: :radio_buttons %>
           </td>
         </tr>
       </tbody>

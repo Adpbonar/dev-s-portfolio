@@ -7,12 +7,20 @@
   <h1 class="text-center">
     <%= @project.title %>
   </h1>
+  <% if @project.GitHub_link.present? %>
+    <p class="git-link text-center">
+      <strong>View project on  <a target="_blank" href="<%= @project.GitHub_link %>"><i class="fab fa-github"></i></a></strong>
+    </p>
+  <% end %>
   <br />
   <div class="project">
     <%= image_tag @project.project_image, class: 'image' %>
+    <% if @project.coming_soon %>
+      <p class="coming-soon">COMING SOON</p>
+    <% end %>
   </div>
   <br />
-  <p>
+   <p>
     <strong>Versions:</strong>
     <%= @project.versions %>
   </p>
