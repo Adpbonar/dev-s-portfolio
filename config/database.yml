@@ -83,8 +83,17 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: devprofileblog_production
+#   username: devprofileblog
+#   password: <%= ENV['DEVPROFILEBLOG_DATABASE_PASSWORD'] %>
+
+
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: devprofileblog_production
   username: devprofileblog
   password: <%= ENV['DEVPROFILEBLOG_DATABASE_PASSWORD'] %>
