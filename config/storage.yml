@@ -20,7 +20,7 @@ local:
   project: todo-pic
   credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'].as_json %>
   bucket: devsdevbucket
-google_dev:
+ google_dev:
   service: GCS
   project: devsdevportfolio
   credentials: <%= Rails.root.join("config/secrets/devsdevportfolio.json") %>
