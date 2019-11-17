@@ -206,6 +206,7 @@ end
               <div class="featured-project text-center"><h4><%= project.title %></h4></div>
               <p class="text-left"><%= image_tag project.project_image, class: 'project-index-image' %></p>
               <p class="text-left"><%= project.description %></p>
+              <div class="featured-project"><%= link_to 'details'.upcase, project_path(project), class: 'more' %></div>
             </div
           <% end %>  
           <br class="clear">      
