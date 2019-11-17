@@ -496,6 +496,12 @@ topbtn:focus {
   opacity: .7;
 }
 
+.badge-secondary {
+  padding: 4px !important;
+  border-radius: 0 !important;
+  border: 1px solid #b4b2b2 !important;
+}
+
 .project {
  text-align: center;
 }
