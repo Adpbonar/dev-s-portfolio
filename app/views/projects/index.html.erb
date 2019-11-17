@@ -7,22 +7,24 @@
 <% end %>
 <br />
 <br />
-<div class="row project-text">
-  <h1 class="text-center">Projects</h1>
-</div>
-  <% @projects.each do |project| %>
-    <div class="row project-text">
-      <div class="col-sm-4">
-        <h2><%= project.title %></h2>
+<div class="wrapper">
+  <div class="row project-text">
+    <h1 class="text-center">Projects</h1>
+  </div>
+    <% @projects.each do |project| %>
+      <div class="row project-text">
+        <div class="col-sm-4">
+          <h2><%= project.title %></h2>
+        </div>
+        <div class="col-sm-4">
+          <%= image_tag project.project_image, class: 'project-index-image' %>
+        </div>
+        <div class="col-sm-4">
+          <%= link_to 'details'.upcase, project, class: 'more' %>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <%= image_tag project.project_image, class: 'project-index-image' %>
-      </div>
-      <div class="col-sm-4">
-        <%= link_to 'details'.upcase, project, class: 'more' %>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div
   <br />
   <br />
   <br />
