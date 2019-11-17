@@ -28,6 +28,10 @@
     <strong>Project Information:</strong>
     <%= @project.project_info %>
   </p>
+
+  <br />
+  <center><a target="_blank" href="<%= @project.live_link %>"><p class="more">Test it out</p></a></center>
+
   <br />
   <% if current_user && current_user == @project.user %>
     <%= link_to 'Edit', edit_project_path(@project) %> |
