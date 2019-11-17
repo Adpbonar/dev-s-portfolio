@@ -9,8 +9,7 @@
   </h1>
   <br />
   <p>
-    <strong>Versions:</strong>
-    <%= @code_sample.versions %>
+    <span class="badge badge-secondary"><u>Language(s)</u>: <%= @code_sample.versions %></span>
   </p>
 
   <p>
@@ -18,10 +17,18 @@
     <%= @code_sample.description %>
   </p>
 
-  <p>
+  <div class="text-center">
     <strong>Code:</strong>
-    <%= @code_sample.code %>
-  </p>
+    <br />
+    <div class="box">
+      <div class="more-code">
+        <%= @code_sample.code.html_safe %>
+      </div>
+    </div>
+  </div>
+  <br class="clear" />
+
+  <% @code_sample.reload %>
 
   <% if current_user && current_user == @code_sample.user %>
     <%= link_to 'Edit', edit_code_sample_path(@code_sample) %> |
@@ -29,4 +36,8 @@
     <%= link_to "Delete", code_sample_path(@code_sample), method: :delete, data: { confirm: "Are you sure you want to delete this article?"} %>
   <% end %>
   <br />
-</section
+</section>
+<br /> 
+<br />
+<br />
+<br />
