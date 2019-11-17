@@ -118,81 +118,26 @@
     <br />
     <div class="page-content">
       <h3 id="code-samples" class="index-heder">Code Snippets</h3>
-      <div class="box2">
-        <H4>Temperature Conversion</H4>
-        <p>This Ruby program will ask the user to report the temperature in Celsius and let the user know what that
-          temperature is in Fahrenheit.</p>
+      <div class="row">
+      <% @code_samples.each do |code_sample| %>
+        
+          <% if code_sample.featured %>
+            <div class="col-sm-5 box">
+              <div class="featured-project text-center"><h4><%= code_sample.title %></h4></div>
+              <%= code_sample.code.html_safe %>
+              <p class="text-left"><%= code_sample.description %></p>
+              <div class="featured-project"><%= link_to 'details'.upcase, code_sample_path(code_sample), class: 'more' %></div>
+            </div
+          <% end %>  
+          <br class="clear"> 
+          <% code_sample.reload %>     
+      <% end %>
+      
       </div>
 
-      <div class="box2">
-        <pre><code class="language-ruby">puts &quot;What is the temperature?&quot;
-num = gets.chomp
-
-def celsius(num)
-   fahrenheit = (num.to_f * 9 / 5) + 32
-   return fahrenheit
-end
-
-puts &quot;If it is #{num} degrees Celsius, it is #{celsius(num)} 
-Fahrenheit.&quot;</code></pre>
-      </div>
-
-      <br class="clear" />
-
-      <div class="box2">
-        <pre><code class="language-ruby">puts &quot;Enter a number.&quot;
-number = gets.chomp
-int = number.to_i
-if int % 100 == 11 || int % 100 == 12 || int % 100 == 13
-    puts &quot;#{number}th&quot;
-    elsif
-    int % 10 == 1
-    puts &quot;#{int}st&quot;
-    elsif
-    int % 10 == 2 
-    puts &quot;#{int}nd&quot;
-    elsif
-    int % 10 == 3 
-    puts &quot;#{int}rd&quot;
-     else
-    puts &quot;#{int}th&quot;
-end</code></pre>
-      </div>
-
-      <div class="box2">
-        <h4>Ordinal Challenge</h4>
-        <p>This Ruby program will convert a number to its ordinal. For example, if a user enters the number 13, the
-          program will display the appropriate position.</p>
-      </div>
-
-      <br class="clear" />
-      <div class="box2">
-        <h4>Foobar</h4>
-        <p>This Ruby program is an adaptation of the classic programing challenge. It displays the sequence of the
-          Foobar pattern.</p>
-      </div>
-
-      <div class="box2">
-        <pre><code class="language-ruby">puts &quot;How many items do you want to see?&quot;
-long = gets.chomp
-
-def foo_bar(long)
-num = long.to_i
-   1.step(num).each do |n|
-        if n % 3 == 0 &amp;&amp; n % 5 == 0
-            puts&quot;Foobar&quot;
-        elsif n % 3 == 0  
-             puts &quot;Foo&quot;             
-        elsif n % 5 == 0
-            puts &quot;Bar&quot;
-        else
-            puts n
-        end 
-    end
-end
-</code></pre>
-      </div>
-
+        <br />
+      
+      <br />
       <br class="clear" />
       <br class="clear" />
       <center><p class="more"><%= link_to' See all code', more_code_path %></p></center>

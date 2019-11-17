@@ -69,6 +69,6 @@ class CodeSamplesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def code_sample_params
-      params.require(:code_sample).permit(:title, :versions, :description, :code, :featured)
+      params.require(:code_sample).permit(:title, :versions, :description, :code, :featured, :code_info)
     end
 end

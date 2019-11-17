@@ -8,10 +8,12 @@
     <%= f.input :versions %>
     <%= f.input :description, label: 'Description (for Featured Code Samples)' %>
     <%= f.input :code %>
+    <br />
+    <%= f.rich_text_area :code_info %>
     <%= f.input :featured, label: 'Feature on homepage?', as: :radio_buttons %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-success' %>
   </div>
 <% end %>
