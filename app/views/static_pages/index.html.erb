@@ -195,17 +195,17 @@ end
 
       <br class="clear" />
       <br class="clear" />
-      <center><p class="more"><%= link_to' See more code?', more_code_path %></p></center>
-      <br />
+      <center><p class="more"><%= link_to' See all code', more_code_path %></p></center>
+      <br class="clear" /><br />
       <h3 id="web-apps" class="index-heder">Web Apps</h3>
       <div class="row">
       <% @projects.each do |project| %>
         
           <% if project.featured %>
             <div class="col-sm-5 box">
-              <h4 class="text-center"><%= project.title %></h4>
-              <%= image_tag project.project_image, class: 'project-index-image' %>
-              <p><%= project.description %></p>
+              <div class="featured-project text-center"><h4><%= project.title %></h4></div>
+              <p class="text-left"><%= image_tag project.project_image, class: 'project-index-image' %></p>
+              <p class="text-left"><%= project.description %></p>
             </div
           <% end %>  
           <br class="clear">      
@@ -213,10 +213,11 @@ end
       
       </div>
 
-   
+        <br />
       
+      <br />
+      <center><p class="more"><%= link_to 'See all projects?', more_apps_path %></p></center>
       <br class="clear" /><br />
-      <center><p class="more"><%= link_to 'See more projects?', more_apps_path %></p></center>
       <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
       <br />
       <div>

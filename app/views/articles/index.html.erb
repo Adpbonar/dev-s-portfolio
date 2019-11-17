@@ -21,7 +21,7 @@
       <div class="article-body">
         <p class="post"><%= article.snippet %>...</p>
         <br />
-        <p class="more"><%= link_to 'Read more', article_path(article) %></p>
+        <%= link_to 'Read more', article_path(article), class: 'text-center more' %></p>
         <br />
         <br />
         <% end %>
