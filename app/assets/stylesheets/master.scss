@@ -348,6 +348,7 @@ h3 {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  text-align: left !important;
 }
 
 .box2 p {
@@ -1362,7 +1363,7 @@ a:focus {
   .box {
     width: 80%;
     margin-top: 80px;
-    letter-spacing: 4px;
+    text-align: left !important;
   }
 
   .mobile {
