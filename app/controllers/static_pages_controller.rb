@@ -10,11 +10,5 @@ class StaticPagesController < ApplicationController
 
   def contact_me
   end
-
-  def more_code
-  end
-
-  def more_projects
-  end
-
+  
 end
