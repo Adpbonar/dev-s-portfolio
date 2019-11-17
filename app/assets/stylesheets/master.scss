@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+.box h4 {
+  text-align: center !important;
+}
+
 pre {
   height: 400px;
 }
@@ -501,7 +505,12 @@ topbtn:focus {
 }
 
 .project-index-image {
-  width: 90%;
+  width: 100%;
+}
+
+.featured-project {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image {
