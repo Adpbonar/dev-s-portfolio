@@ -64,7 +64,7 @@ class CodeSamplesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_code_sample
-      @code_sample = CodeSample.find(params[:id])
+      @code_sample = CodeSample.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
