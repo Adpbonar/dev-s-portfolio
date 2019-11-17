@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
 body {
   background: image_url('lubo-minar-t4DhcQddCnA-unsplash.jpg') center;
   font-family: 'PT Sans', sans-serif;
@@ -67,6 +68,8 @@ pre {
 .more-code pre {
   border-radius: 20px;
   border: 2px solid blue;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .article-actions {
@@ -332,12 +335,9 @@ h3 {
 }
 
 .box {
-  float: left;
-  width: 42.5%;
-  margin-left: 5%;
-  margin-top: 80px;
-  display: flex;
-  flex-wrap: wrap;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box p {
@@ -345,10 +345,9 @@ h3 {
 }
 
 .box2 {
-  float: left;
-  width: 42.5%;
-  margin-left: 5%;
-  margin-top: 80px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box2 p {
@@ -508,7 +507,7 @@ topbtn:focus {
 }
 
 .project {
- text-align: center;
+  text-align: center;
 }
 
 .index-image {
@@ -536,6 +535,7 @@ topbtn:focus {
 .draft-border {
   border: 2px dashed red;
 }
+
 .draft {
   color: red;
   text-decoration: underline;
@@ -1254,6 +1254,7 @@ article p {
 .col-sm-3 {
   overflow: hidden;
 }
+
 .about-text {
   font-family: 'Dancing Script', cursive;
   font-size: 1.5em;
