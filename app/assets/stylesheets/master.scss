@@ -16,7 +16,8 @@ pre {
 }
 
 .wrapper {
-  width: 100vw;
+  width: 100% !important;
+  overflow: hidden !important;
 }
 
 .scroll {
