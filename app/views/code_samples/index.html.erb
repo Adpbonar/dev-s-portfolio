@@ -20,9 +20,10 @@
         <tr>
           <td><%= code_sample.title %></td>
           <td><%= code_sample.versions %></td>
-          <td><%= code_sample.code %></td>
+          <td><%= code_sample.code.html_safe %></td>
           <td><%= link_to 'Show', code_sample, class: 'more' %></td>
         </tr>
+        code_sample.reload
       <% end %>
     </tbody>
   </table>
