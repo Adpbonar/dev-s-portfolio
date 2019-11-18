@@ -1,5 +1,5 @@
 class IndexDocumentsController < ApplicationController
-  # before_action :authenticate_user!, only: [:create, :edit, :update]
+  before_action :authenticate_user!, only: [:edit, :update]
   before_action :set_index_document, only: [:edit, :update]
 
   # GET /index_documents
@@ -7,35 +7,6 @@ class IndexDocumentsController < ApplicationController
   def index
     @index_documents = IndexDocument.all
   end
-
-  def new
-    @index_document = IndexDocument.new
-  end
-
-  # GET /index_documents/1/edit
-  def edit
-  end
-
-  # POST /index_documents
-  # POST /index_documents.json
-  def create
-    @index_document = IndexDocument.new(index_document_params)
-
-    respond_to do |format|
-      if @index_document.save
-        format.html { redirect_to @index_document, notice: 'Index document was successfully created.' }
-        format.json { render :show, status: :created, location: @index_document }
-      else
-        format.html { render :new }
-        format.json { render json: @index_document.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # GET /projects/1/edit
-  def edit
-  end
-
 
   # GET /index_documents/1/edit
   def edit

@@ -1,36 +1,11 @@
 class AboutDocumentsController < ApplicationController
-  # before_action :authenticate_user!, only: [:create, :edit, :update]
+  before_action :authenticate_user!, only: [:edit, :update]
   before_action :set_about_document, only: [ :edit, :update]
 
   # GET /about_documents
   # GET /about_documents.json
   def index
     @about_documents = AboutDocument.all
-  end
-
-  # GET /about_documents/1/edit
-  def new
-    @about_document = AboutDocument.new
-  end
-
-  # GET /about_documents/1/edit
-  def edit
-  end
-
-  # POST /about_documents
-  # POST /about_documents.json
-  def create
-    @about_document =  @about_document = AboutDocument.new(about_document_params)
-
-    respond_to do |format|
-      if @about_document.save
-        format.html { redirect_to @about_document, notice: 'About document was successfully created.' }
-        format.json { render :show, status: :created, location: @about_document }
-      else
-        format.html { render :new }
-        format.json { render json: @about_document.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /about_documents/1

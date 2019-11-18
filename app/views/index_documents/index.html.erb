@@ -13,7 +13,6 @@
       <% @index_documents.each do |index_document| %>
         <tr>
           <td><%= link_to 'Edit', edit_index_document_path(index_document) %></td>
-          <td><%= link_to 'Destroy', index_document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
