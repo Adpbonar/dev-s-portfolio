@@ -1,5 +1,5 @@
 class IndexDocumentsController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:create, :edit, :update]
   before_action :set_index_document, only: [:edit, :update]
 
   # GET /index_documents
@@ -24,7 +24,7 @@ class IndexDocumentsController < ApplicationController
     respond_to do |format|
       if @index_document.save
         format.html { redirect_to @index_document, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
+        format.json { render :show, status: :created, location: @index_document}
       else
         format.html { render :new }
         format.json { render json: @index_document.errors, status: :unprocessable_entity }

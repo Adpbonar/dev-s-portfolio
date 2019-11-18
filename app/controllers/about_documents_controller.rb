@@ -1,5 +1,5 @@
 class AboutDocumentsController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:create, :edit, :update]
   before_action :set_about_document, only: [ :edit, :update]
 
   # GET /about_documents
@@ -28,7 +28,7 @@ class AboutDocumentsController < ApplicationController
     respond_to do |format|
       if @about_document.save
         format.html { redirect_to @about_document, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
+        format.json { render :show, status: :created, location: @about_documents }
       else
         format.html { render :new }
         format.json { render json: @about_document.errors, status: :unprocessable_entity }
