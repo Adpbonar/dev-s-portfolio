@@ -21,14 +21,7 @@ class IndexDocumentsController < ApplicationController
   def create
     @project = current_user.index_documents.new(project_params)
 
-    respond_to do |format|
-      if @index_document.save
-        format.html { redirect_to @index_document, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @index_document}
-      else
-        format.html { render :new }
-        format.json { render json: @index_document.errors, status: :unprocessable_entity }
-      end
+       @index_document.save
     end
   end
 
