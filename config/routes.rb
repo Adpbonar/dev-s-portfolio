@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :index_documents, only: [:new, :create, :index, :edit, :update]
-  resources :about_documents, only: [:new, :create, :index, :edit, :update]
+  resources :index_documents
+  resources :about_documents
   resources :code_samples
   resources :projects
   resources :articles
