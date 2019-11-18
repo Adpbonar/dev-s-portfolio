@@ -20,7 +20,7 @@ class AboutDocumentsController < ApplicationController
   # POST /about_documents
   # POST /about_documents.json
   def create
-    @about_document = AboutDocument.new(about_document_params)
+    @about_document = about_document.new(about_document_params)
 
     respond_to do |format|
       if @about_document.save

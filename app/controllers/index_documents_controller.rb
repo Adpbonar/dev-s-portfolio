@@ -19,7 +19,7 @@ class IndexDocumentsController < ApplicationController
   # POST /index_documents
   # POST /index_documents.json
   def create
-    @index_document = current_user.IndexDocument.new(index_document_params)
+    @index_document = current_user.index_document.new(index_document_params)
 
     respond_to do |format|
       if @index_document.save
