@@ -13,7 +13,7 @@ class AboutDocumentsController < ApplicationController
   def update
     respond_to do |format|
       if @about_document.update(about_document_params)
-        format.html { redirect_to @about_document, notice: 'About document was successfully updated.' }
+        format.html { redirect_to about_path, notice: 'About document was successfully updated.' }
         format.json { render :show, status: :ok, location: @about_document }
       else
         format.html { render :edit }

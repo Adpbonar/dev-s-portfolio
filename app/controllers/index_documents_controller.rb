@@ -17,7 +17,7 @@ class IndexDocumentsController < ApplicationController
   def update
     respond_to do |format|
       if @index_document.update(index_document_params)
-        format.html { redirect_to @index_document, notice: 'Index document was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Index document was successfully updated.' }
         format.json { render :show, status: :ok, location: @index_document }
       else
         format.html { render :edit }
