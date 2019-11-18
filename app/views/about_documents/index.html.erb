@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<section class="page-content">
+  <h1>About Document Options</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @about_documents.each do |about_document| %>
+        <tr>
+          <td><%= link_to 'Edit', edit_about_document_path(about_document) %></td>
+          <td><%= link_to 'Destroy', about_document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

@@ -25,7 +25,7 @@
       <br />
     </div>
     <div class="about">
-      <%= image_tag 'me.jpg', class: 'me', alt: "Photo of Devan Potter-Bonar" %>
+      <%= image_tag @index_document.image, class: 'me', alt: "Photo of Devan Potter-Bonar" %>
       <h1 style="text-shadow: 2px 2px grey">Devan Potter-Bonar</h1>
 
 
@@ -34,50 +34,19 @@
       <div class="bio-box" title="A Brief Introduction">
         <div class="brand-mobile">
           <p class="bio" title="A Brief Introduction">
-            Devan Potter-Bonar is a mobile focused Certified Full Stack Web Developer specializing in creating
-            user-friendly web apps and sites.
+            <%= @index_document.mobile_brand_one.html_safe %>
           </p>
           <p data-toggle="collapse" data-target="#more-info" class="text-center first-click" title="More About Devan">
             More</p>
           <div id="more-info" class="collapse firstclick">
             <p class="bio">
-              Understanding that Branding is as important as the product itself—sometimes more, Devan successfully
-              developed and implemented wide-ranging brand concepts for clients. He has a very strong work-ethic, thirst
-              for knowledge and ever-expanding experience. Determined and reliable, Devan is very attentive to the needs
-              of his clients. His training in JavaScript/ES6, CSS3, HTML5 and Ruby/Rails enables him to find
-              imaginative,
-              yet functional, solutions to issues that arise. He keeps constantly evolving with trends and including new
-              techniques projects. With a strong sense of community involvement, Devan plans to contribute a portion of
-              his time to creating apps for community organizations.
-            </p>
-            <p class="bio">
-              Devan’s clear communication style facilitates teamwork and client satisfaction. He is excited to create
-              intuitive apps that can be easily used by his corporate and individual clients day after day…
+              <%= @index_document.mobile_brand_two.html_safe %>
             </p>
           </div>
         </div>
         <div class="brand">
           <p class="bio" title="A Brief Introduction">
-            Devan Potter-Bonar is a mobile focused Certified Full Stack Web Developer specializing in creating
-            user-friendly web apps and sites.
-          </p>
-          <p class="bio">
-            Understanding that Branding is as important as the product itself—sometimes more, Devan successfully
-            developed and implemented wide-ranging brand concepts for clients. He has a very strong work-ethic,
-            thirst
-            for knowledge and ever-expanding experience. Determined and reliable, Devan is very attentive to the
-            needs
-            of his clients. His training in JavaScript/ES6, CSS3, HTML5 and Ruby/Rails enables him to find
-            imaginative,
-            yet functional, solutions to issues that arise. He keeps constantly evolving with trends and including
-            new
-            techniques projects. With a strong sense of community involvement, Devan plans to contribute a portion
-            of
-            his time to creating apps for community organizations.
-          </p>
-          <p class="bio">
-            Devan’s clear communication style facilitates teamwork and client satisfaction. He is excited to create
-            intuitive apps that can be easily used by his corporate and individual clients day after day…
+            <%= @index_document.brand_statement.html_safe %>
           </p>
         </div>
       </div>
