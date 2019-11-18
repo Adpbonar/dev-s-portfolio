@@ -4,32 +4,34 @@ class AboutDocumentsController < ApplicationController
 
   # GET /about_documents
   # GET /about_documents.json
-  def about
+  def index
     @about_documents = AboutDocument.all
+  end
+
+  # GET /about_documents/1/edit
+  def new
+    @about_document = AboutDocument.new
   end
 
   # GET /about_documents/1/edit
   def edit
   end
 
-  def new
-    @about_document = AboutDocument.new
-  end
-
-  # GET /projects/1/edit
-  def edit
-  end
-
-  # POST /projects
-  # POST /projects.json
+  # POST /about_documents
+  # POST /about_documents.json
   def create
-    @project = current_user.about_documents.new(project_params)
+    @about_document = AboutDocument.new(about_document_params)
 
-   
-     @about_document.save
-
+    respond_to do |format|
+      if @about_document.save
+        format.html { redirect_to @about_document, notice: 'About document was successfully created.' }
+        format.json { render :show, status: :created, location: @about_document }
+      else
+        format.html { render :new }
+        format.json { render json: @about_document.errors, status: :unprocessable_entity }
+      end
+    end
   end
-
 
   # PATCH/PUT /about_documents/1
   # PATCH/PUT /about_documents/1.json
