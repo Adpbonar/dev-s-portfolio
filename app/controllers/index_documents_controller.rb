@@ -12,17 +12,28 @@ class IndexDocumentsController < ApplicationController
     @index_document = IndexDocument.new
   end
 
-  # GET /projects/1/edit
+  # GET /index_documents/1/edit
   def edit
   end
 
-  # POST /projects
-  # POST /projects.json
+  # POST /index_documents
+  # POST /index_documents.json
   def create
-    @project = current_user.index_documents.new(project_params)
+    @index_document = current_user.IndexDocument.new(index_document_params)
 
-       @index_document.save
+    respond_to do |format|
+      if @index_document.save
+        format.html { redirect_to @index_document, notice: 'Index document was successfully created.' }
+        format.json { render :show, status: :created, location: @index_document }
+      else
+        format.html { render :new }
+        format.json { render json: @index_document.errors, status: :unprocessable_entity }
+      end
     end
+  end
+
+  # GET /projects/1/edit
+  def edit
   end
 
 
