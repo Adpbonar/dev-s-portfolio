@@ -1,5 +1,5 @@
 class IndexDocumentsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :edit, :update]
+  # before_action :authenticate_user!, only: [:create, :edit, :update]
   before_action :set_index_document, only: [:edit, :update]
 
   # GET /index_documents
@@ -19,7 +19,7 @@ class IndexDocumentsController < ApplicationController
   # POST /index_documents
   # POST /index_documents.json
   def create
-    @index_document = current_user.index_document.new(index_document_params)
+    @index_document = IndexDocument.new(index_document_params)
 
     respond_to do |format|
       if @index_document.save
