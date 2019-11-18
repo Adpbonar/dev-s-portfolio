@@ -25,15 +25,9 @@ class AboutDocumentsController < ApplicationController
   def create
     @project = current_user.about_documents.new(project_params)
 
-    respond_to do |format|
-      if @about_document.save
-        format.html { redirect_to @about_document, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @about_documents }
-      else
-        format.html { render :new }
-        format.json { render json: @about_document.errors, status: :unprocessable_entity }
-      end
-    end
+   
+     @about_document.save
+
   end
 
 
