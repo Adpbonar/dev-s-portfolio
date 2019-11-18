@@ -1,5 +1,8 @@
-<header>
-</header>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+  <title>About Devan</title>
+</head>
+
 <br />
 <div class="page-content">
   <h1 class="text-center">About</h1>
@@ -8,37 +11,21 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="about-formatter">
-        <span class="mobile-about-photo">
-          <br />
-          <br />
-          <br />
-          <br />
-        </span>
-        <center><%= image_tag 'me-about.jpg', alt: "Photo of Devan Potter-Bonar", class: 'about-photo' %></center>
+    
+        <center><%= image_tag @about_document.image, alt: "Photo of Devan Potter-Bonar", class: 'about-photo' %></center>
         <br />
         <br />
         <center>
           <div class="no-mobile-about-text">
-            <span class="about-more"><%= link_to 'Some code', more_code_path %></span>&nbsp; &nbsp; &nbsp;
-            <span class="about-more"><%= link_to 'Some projects', more_apps_path %></span>
+            <span class="about-more"><%= link_to 'My code', code_samples_path %></span>&nbsp; &nbsp; &nbsp;
+            <span class="about-more"><%= link_to 'My projects', projects_path %></span>
           </div>
       </div>
     </div>
     <div class="col-sm-6">
-      <div class="about-text" title="A message about Devan">
-        <p>
-          Devan Potter-Bonar is a certified Full Stack Web Developer. With extensive experience in retail and at the
-          Bonar
-          Institute for Purposeful Leadership, Devan has a penchant for creative problem solving and for eye-catching
-          design.
-          Applying a results driven, mobile-first approach to his web apps and sites, Devan provides his clients with
-          a convenient
-          and user-friendly front-end experience.
-        </p>
-        <p>
-          Devan believes in creating websites that are easy and fun to use. He would love to help you enrich your
-          site's
-          user-experience, while enabling you to maintain control of your information and your narrative.
+      <div title="A message about Devan">
+        <p class="about-text">
+          <%= @about_document.about_statement.html_safe %>
         </p>
       </div>
       </center>
@@ -48,8 +35,8 @@
   <br class="clear" />
   <br />
   <div class="mobile-about-text">
-    <center><span class="about-more"><%= link_to 'Some code', more_code_path %></span>&nbsp; &nbsp; &nbsp;
-    <span class="about-more"><%= link_to 'Some projects', more_apps_path %></span>
+    <center><span class="about-more"><%= link_to 'My code', code_samples_path %></span>&nbsp; &nbsp; &nbsp;
+    <span class="about-more"><%= link_to 'My projects', projects_path %></span>
     <br />
     <br /></center>
   </div>

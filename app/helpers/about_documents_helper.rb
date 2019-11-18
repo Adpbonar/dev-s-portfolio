@@ -1,0 +1,2 @@
+module AboutDocumentsHelper
+end

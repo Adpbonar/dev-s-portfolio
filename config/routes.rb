@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :index_documents, only: [:index, :edit, :update]
+  resources :about_documents, only: [:index, :edit, :update]
   resources :code_samples
   resources :projects
   resources :articles
