@@ -13,7 +13,7 @@ class AboutDocumentsController < ApplicationController
   end
 
   def new
-    @about_document = aboutDocument.new
+    @about_document = AboutDocument.new
   end
 
   # GET /projects/1/edit
