@@ -26,8 +26,11 @@
 
   <p>
     <strong>Project Information:</strong>
-    <%= @project.project_info %>
   </p>
+    <div class="wrapper">
+    <%= @project.project_info %>
+    </div>
+ 
   <% if @project.live_link.present? %>
     <br />
     <center><a target="_blank" href="<%= @project.live_link %>"><p class="more">Test it out</p></a></center>

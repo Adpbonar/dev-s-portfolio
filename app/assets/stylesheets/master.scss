@@ -1298,12 +1298,11 @@ article p {
   -moz-box-shadow: 1px 1px 2px 0 rgb(105, 105, 105);
   -webkit-box-shadow: 1px 1px 2px 0 rgb(105, 105, 105);
   box-shadow: 1px 1px 2px 0 rgb(105, 105, 105);
-  border-radius: 4px;
   margin: 3px;
   border: 1px solid rgb(226, 223, 223);
   background-color: rgb(255, 255, 255);
   padding: 10px;
-  width: 98%;
+  width: 95%;
   margin-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
@@ -1431,10 +1430,6 @@ a:focus {
     margin-top: 80px;
     letter-spacing: 4px;
     text-align: left !important;
-  }
-
-  .page-content {
-    width: 87%;
   }
 
   .cme-more-code {
