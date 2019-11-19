@@ -523,6 +523,9 @@ topbtn:focus {
 .project-index-image {
   width: 100%;
   border: 1px dotted white;
+  .coming-soon {
+    max-width: 100%;
+  }
 }
 
 .git-link {
