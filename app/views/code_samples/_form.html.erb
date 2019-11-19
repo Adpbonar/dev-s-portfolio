@@ -9,7 +9,7 @@
     <%= f.input :description, label: 'Description', placeholder: 'This text will appear on the code show page and the homepage.' %>
     <%= f.input :code %>
     <br />
-    <%= f.rich_text_area :code_info, placeholder: 'Unless text is added to it, this is a hidden field. It should include any additional relevant information that is not present in the description.' %>
+    <%= f.rich_text_area :code_info, class: 'text-left', placeholder: 'Unless text is added to it, this is a hidden field. It should include any additional relevant information that is not present in the description.' %>
     <%= f.input :featured, label: 'Feature on homepage?', as: :radio_buttons %>
   </div>
 
