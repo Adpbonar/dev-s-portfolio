@@ -18,15 +18,12 @@ class ArticlesController < ApplicationController
       if @article.article_posted == true
         flash[:notice] = "Article was successfully published"
         redirect_to root_path
-      elsif @article.article_posted == "false"
-        flash[:notice] = "Article was successfully created as a draft"
+      elsif @article.article_posted == false
+        flash[:notice] = "Article was successfully created and will be published at the scheduled time"
         redirect_to root_path
       elsif @article.article_post_scheduled == true
         flash[:notice] = "Article was successfully scheduled"
         redirect_to root_path
-      else 
-        flash[:success] = "Article was not created"
-        render 'new'
       end
     end
   end
@@ -39,7 +36,7 @@ class ArticlesController < ApplicationController
       if @article.article_posted == true
         flash[:notice] = "Article was successfully published"
         redirect_to root_path
-      elsif @article.article_posted == "false"
+      elsif @article.article_posted == false
         flash[:notice] = "Article was successfully created as a draft"
         redirect_to root_path
       elsif @article.article_post_scheduled == true
@@ -81,8 +78,9 @@ class ArticlesController < ApplicationController
   def article_publish
     if @article.present?
       if @article.draft == false 
-        if @article.scheduled_for >= Time.now
+        if @article.scheduled_for >= DateTime.current
           @article.update(published: true)
+          @article.reload
         end
       end
     end
@@ -92,6 +90,7 @@ class ArticlesController < ApplicationController
     if @article.present?
       if @article.draft == true
         @article.update(published: false)
+        @article.reload
       end
     end
   end

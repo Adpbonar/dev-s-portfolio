@@ -15,8 +15,15 @@ pre {
 }
 
 .wrapper {
-  width: 100% !important;
+  width: 95% !important;
   overflow: hidden !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preview img {
+  height: 200px;
+  padding: 4px;
 }
 
 .scroll {

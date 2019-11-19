@@ -9,21 +9,22 @@ class Article < ApplicationRecord
   validates :user, presence: true
   validates :published, inclusion: { in: [ true, false ] }
 
+  def article_post_scheduled
+    if (DateTime.current < self.scheduled_for) && (self.draft == false)
+      self.update(published: false)
+      return true
+    elsif (DateTime.current >= self.scheduled_for) && (self.draft == false)
+      self.update(published: true)
+    end
+  end
 
   def article_posted
-    if (Time.now >= self.scheduled_for) && (self.draft == false)
-      self.update(published: true)
+    if (DateTime.current >= self.scheduled_for) && (self.draft == false)
+      self.update(published: true) 
       return true
     elsif self.draft == true
       self.update(published: false)
       return false
-    end
-  end
-
-  def article_post_scheduled
-    if (Time.now < self.scheduled_for) && (self.draft == "false")
-      self.update(published: false)
-      return true
     end
   end
 end

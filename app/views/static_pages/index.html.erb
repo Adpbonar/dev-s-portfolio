@@ -15,9 +15,9 @@
       <table class="options" style="text-align: center; width: 95%; width: 100hw;" align="center" cellspacing="2">
         <tbody>
           <tr>
-            <td><a href="#code-samples" class="nav-link">CODE SAMPLES</a></td>
-            <td><a href="#web-apps" class="nav-link">WEB APPS</a></td>
-            <td><a href="#skills-and-tools" class="nav-link">SKILLS &amp; TOOLS</a></td>
+            <td><a href="#code-samples" class="nav-link">CODE</a></td>
+            <td><a href="#web-apps" class="nav-link">APPS</a></td>
+            <td><a href="#skills-and-tools" class="nav-link">TOOLBOX</a></td>
             <br />
           </tr>
         </tbody>
@@ -32,11 +32,11 @@
       <h2 style="letter-spacing: 1.5px;">WEB DEVELOPER</h2>
 
       <div class="bio-box" title="A Brief Introduction">
-        <div class="brand-mobile">
+        <div id="mobile-1" class="brand-mobile">
           <p class="bio" title="A Brief Introduction">
             <%= @index_document.mobile_brand_one.html_safe %>
           </p>
-          <p data-toggle="collapse" data-target="#more-info" class="text-center first-click" title="More About Devan">
+          <p data-toggle="collapse" data-target="#more-info" class="first-click text-center" title="More About Devan">
             More</p>
           <div id="more-info" class="collapse firstclick">
             <p class="bio">
@@ -50,15 +50,6 @@
           </p>
         </div>
       </div>
-      <script>
-        $(function () {
-          $(".first-click").click(function () {
-            $(this).text(function (i, text) {
-              return text === "Less" ? "More" : "Less";
-            })
-          });
-        })
-      </script>
       <br />
     </div>
   </div>
@@ -95,7 +86,7 @@
               <div class="featured-project text-center"><h4><%= code_sample.title %></h4></div>
               <%= code_sample.code.html_safe %>
               <p class="text-left"><%= code_sample.description %></p>
-              <div class="featured-project"><%= link_to 'details'.upcase, code_sample_path(code_sample), class: 'more' %></div>
+              <div class="featured-project text-center"><%= link_to 'details'.upcase, code_sample_path(code_sample), class: 'more' %></div>
             </div
           <% end %>  
           <br class="clear"> 
@@ -123,7 +114,7 @@
                 <p class="coming-soon">COMING SOON</p>
               <% end %>
               <p class="text-left"><%= project.description %></p>
-              <div class="featured-project"><%= link_to 'details'.upcase, project_path(project), class: 'more' %></div>
+              <div class="featured-project text-center"><%= link_to 'details'.upcase, project_path(project), class: 'more' %></div>
             </div
           <% end %>  
           <br class="clear">      
@@ -137,7 +128,6 @@
       <center><p class="more"><%= link_to 'See all projects?', projects_path %></p></center>
       <br class="clear" /><br />
       <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
-      <br />
       <div>
         <p class="s-t">
           Devan has developed proficiency and expertise
@@ -170,12 +160,14 @@
                         <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
                       </div>
                     </div>
+                    <br class="clear" />
                 <% else %>
                   <div class="blog-title text-center">
                     <%= link_to article.title, article_path(article) %><br />
                     <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
                   </div>
                 </div>
+              </div>
                 <% end %>
               <% end %>
               <% end %>
@@ -189,4 +181,12 @@
     <br />
     <br />
     <br />
-</body>
+    <script>
+    $(function () {
+      $(".first-click").click(function () {
+        $(this).text(function (i, text) {
+          return text === "Less" ? "More" : "Less";
+        })
+      });
+    })
+  </script>
