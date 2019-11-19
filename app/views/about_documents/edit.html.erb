@@ -1,6 +1,12 @@
 <section class="page-content">
   <h1 class="text-center">Editing About Document</h1>
+  <br />
+  <p class="text-center">Current Image</p>
 
+  <div class="preview text-center">
+    <%= image_tag @about_document.image %>
+  </div>
+  <br />
   <%= render 'form', about_document: @about_document %>
 
   <%= link_to 'Back', about_documents_path %>

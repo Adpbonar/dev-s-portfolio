@@ -1,6 +1,12 @@
 <section class="page-content">
   <h1 class="text-center">Editing Index Document</h1>
+  <br />
+  <p class="text-center">Current Image</p>
 
+  <div class="preview text-center">
+    <%= image_tag @index_document.image %>
+  </div>
+  <br />
   <%= render 'form', index_document: @index_document %>
 
   <%= link_to 'Back', index_documents_path %>
