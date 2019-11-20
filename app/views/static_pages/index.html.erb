@@ -79,24 +79,20 @@
     <div class="page-content">
       <h3 id="code-samples" class="index-heder">Code Snippets</h3>
       <div class="row">
-      <% @code_samples.each do |code_sample| %>
-        
-          <% if code_sample.featured %>
-            <div class="col-sm-5 box">
-              <div class="featured-project text-center"><h4><%= code_sample.title %></h4></div>
-              <%= code_sample.code.html_safe %>
-              <p class="text-left"><%= code_sample.description %></p>
-              <div class="featured-project text-center"><%= link_to 'details'.upcase, code_sample_path(code_sample), class: 'more' %></div>
-            </div
-          <% end %>  
-          <br class="clear"> 
-          <% code_sample.reload %>     
-      <% end %>
-      
+        <% @code_samples.each do |code_sample| %>
+            <% if code_sample.featured %>
+              <div class="col-sm-5 box">
+                <div class="featured-project text-center"><h4><%= code_sample.title %></h4></div>
+                <%= code_sample.code.html_safe %>
+                <p class="text-left"><%= code_sample.description %></p>
+                <div class="featured-project text-center"><%= link_to 'details'.upcase, code_sample_path(code_sample), class: 'more' %></div>
+              </div
+            <% end %>  
+            <br class="clear"> 
+            <% code_sample.reload %>     
+        <% end %>  
       </div>
-
-        <br />
-      
+      <br />
       <br />
       <br class="clear" />
       <br class="clear" />
@@ -178,12 +174,16 @@
     <br />
     <br />
     <br />
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
     <script>
-    $(function () {
-      $(".first-click").click(function () {
-        $(this).text(function (i, text) {
-          return text === "Less" ? "More" : "Less";
-        })
-      });
-    })
+      $(function () {
+        $(".first-click").click(function () {
+          $(this).text(function (i, text) {
+            return text === "Less" ? "More" : "Less";
+          })
+        });
+      })
   </script>
