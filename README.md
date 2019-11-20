@@ -1,6 +1,6 @@
 # Portfolio Page
 
-My portfolio page was originally built using Ruby 2.5.3p105 and Rails 5.2.3 and has been updated to the versions listed under the versions heading.  It uses Active Storage for image uploads and Action Text for rich text inputs and integrates with Google Cloud Storage for production on Heroku.
+My portfolio page was originally built using Ruby 2.5.3p105 and Rails 5.2.3 and has been updated to Ruby 2.6.3p62, Rails 6.0.1.  It uses Active Storage for image uploads and Action Text for rich text inputs and integrates with Google Cloud Storage for production on Heroku.
 
 My portfolio page is styled with CSS and Bootstrap and uses JQuery to enhance some of the functionality. With a built-in blog feature, and database tables for code samples, projects and miscellaneous information; it makes managing my personal coding journey really easy. No longer do I have to commit changes that I wish to make, I can simply sign in and fill out a form.
 
