@@ -104,8 +104,7 @@
       <br class="clear" /><br />
       <h3 id="web-apps" class="index-heder">Web Apps</h3>
       <div class="row">
-      <% @projects.each do |project| %>
-        
+        <% @projects.each do |project| %>
           <% if project.featured %>
             <div class="col-sm-5 box">
               <div class="featured-project text-center"><h4><%= project.title %></h4></div>
@@ -143,40 +142,37 @@
           <br class="clear" />
           <%= image_tag 'skills.png', alt: "Skills: HTML/CSS, Ruby, Rails, Algorithms, Javascript", class: 'icon' %>
         </div>
-        <div>
-          <div class="blog-box">
-            <h1 class="text-center">Read About My Code</h1>
-            <br />
-            <% @articles.each do |article| %>
-            
+        <div class="blog-box">
+          <h1 class="text-center">Read About My Code</h1>
+          <br />
+          <% @articles.each do |article| %>
             <div class="well well-lg">
               <% if article.featured %>
                 <% if article.published || current_user && current_user == article.user %>
-                  <% if ! article.published %>
-                    <div class="draft-border">
-                      <h4 class="draft">DRAFT</h4>
+                  <% article.article_post_scheduled %>
+                    <% if ! article.published %>
+                      <div class="draft-border">
+                        <h4 class="draft">DRAFT</h4>
+                        <div class="blog-title text-center">
+                          <%= link_to article.title, article_path(article) %><br />
+                          <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
+                        </div>
+                      </div>
+                      <br class="clear" />
+                    <% else %>
                       <div class="blog-title text-center">
                         <%= link_to article.title, article_path(article) %><br />
                         <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
                       </div>
-                    </div>
-                    <br class="clear" />
-                <% else %>
-                  <div class="blog-title text-center">
-                    <%= link_to article.title, article_path(article) %><br />
-                    <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
-                  </div>
-                </div>
-              </div>
+                      <br class="clear" />
+                  <% end %>
                 <% end %>
               <% end %>
-              <% end %>
-              <% end %>
-            </div>
-          </div>
-          <br class="clear" />
-        </div>
-    </div>
+              </div>
+            <% end %>
+        <br class="clear" />
+      </div>
+  </div>
     <br />
     <br />
     <br />

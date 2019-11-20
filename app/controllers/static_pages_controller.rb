@@ -12,5 +12,5 @@ class StaticPagesController < ApplicationController
 
   def contact_me
   end
-  
+
 end
