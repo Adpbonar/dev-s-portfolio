@@ -104,16 +104,16 @@
           <% if project.featured %>
             <div class="col-sm-5 box">
               <div class="featured-project text-center"><h4><%= project.title %></h4></div>
-              <%= image_tag project.project_image, class: 'project-index-image' %>
-              <% if project.coming_soon %>
-                <p class="coming-soon">COMING SOON</p>
-              <% end %>
-              <p class="text-left"><%= project.description %></p>
-              <div class="featured-project text-center"><%= link_to 'details'.upcase, project_path(project), class: 'more' %></div>
-            </div
-          <% end %>  
-          <br class="clear">      
-      <% end %>
+                <%= image_tag project.project_image, class: 'project-index-image' %>
+                <% if project.coming_soon %>
+                  <p class="coming-soon">COMING SOON</p>
+                <% end %>
+                <p class="text-left"><%= project.description %></p>
+                <div class="featured-project text-center"><%= link_to 'details'.upcase, project_path(project), class: 'more' %></div>
+              </div
+            <% end %>  
+            <br class="clear">      
+        <% end %>
       
       </div>
 

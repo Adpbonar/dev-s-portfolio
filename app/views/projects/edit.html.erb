@@ -1,7 +1,13 @@
 <br />
 <section class="page-content">
   <h1>Editing Project</h1>
+  <br />
+  <p class="text-center">Current Image</p>
 
+  <div class="preview text-center">
+    <%= image_tag @project.project_image %>
+  </div>
+  <br />
   <%= render 'form', project: @project %>
 
   <%= link_to 'Show', @project %> |
