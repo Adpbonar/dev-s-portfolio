@@ -13,9 +13,10 @@
           <p class="date-text"><%= article.scheduled_for.strftime("%B %d, %Y").upcase %>
         </center>
         <% if article.published || current_user && current_user == article.user %>
-        <% unless article.published %>
+          <% unless article.published %>
             <h5 class="draft">DRAFT</h5>
           <% end %>
+          <% article.article_post_scheduled %>
       </div>
       <cener>
       <div class="article-body">

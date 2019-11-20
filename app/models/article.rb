@@ -15,6 +15,7 @@ class Article < ApplicationRecord
       return true
     elsif (DateTime.current >= self.scheduled_for) && (self.draft == false)
       self.update(published: true)
+      return false
     end
   end
 

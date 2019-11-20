@@ -7,7 +7,7 @@
   <% if @article.published || current_user && current_user == @article.user %>
   <% unless @article.published %>
       <h2 class="draft">DRAFT</h2>
-    <% end %>  
+    <% end %>
     <h2 class="post-title"><%= @article.title %></h2>
     <div class="well col-xs-8 col-xs-offset-2">
     <br />
