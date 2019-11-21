@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </header>
 
-<body>
-  <div class="about-container" title="A bit about Devan Potter-Bonar">
+<body  data-turbolinks="false">
+  <div class="about-container">
     <br />
     <br />
-    <div class="table-top" title="home page section navigation helper">
+    <div class="table-top" title="home page navigation helper">
       <table class="options" style="text-align: center; width: 95%; width: 100hw;" align="center" cellspacing="2">
         <tbody>
           <tr>
@@ -65,7 +65,7 @@
           <li class="dropdown-header">Articles</li>
           <li class="menu-item"><a href="<%= articles_path %>">Read Articles</a></li>
           <li class="dropdown-header">Resume</li>
-          <li class="menu-item"><%= link_to "Download", "/Devan_Potter-Bonar_ Resume.pdf", :target => "_blank" %></li>
+          <li class="menu-item"><a href="<%= @about_document.resume_link %>">Download</a></li>
           <li class="dropdown-header">Profiles</li>
           <li class="menu-item"><a target="_blank" href="https://www.linkedin.com/in/devanpotterbonar/">LinkedIn</a>
           </li>
@@ -164,9 +164,9 @@
                   <% end %>
                 <% end %>
               <% end %>
-              </div>
-            <% end %>
-        <br class="clear" />
+            </div>
+          <% end %>
+          <br class="clear" />
       </div>
   </div>
     <br />

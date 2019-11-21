@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
     @projects = Project.all
     @code_samples = CodeSample.all
     @index_document = IndexDocument.find(1)
+    @about_document = AboutDocument.find(1)
   end
   def about
     @about_document = AboutDocument.find(1)
