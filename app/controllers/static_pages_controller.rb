@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact_me
+    @about_document = AboutDocument.find(1)
   end
 
 end
