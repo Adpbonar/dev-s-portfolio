@@ -30,6 +30,6 @@ class AboutDocumentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def about_document_params
-      params.require(:about_document).permit(:about_statement, :image)
+      params.require(:about_document).permit(:about_statement, :image, :resume_link)
     end
 end
