@@ -33,4 +33,17 @@
       max-width: 100% !important;
     }
   }
+
+  @media (max-width: 1024px) {
+    .trix-content {
+      .attachment-gallery {
+        > action-text-attachment,
+        > .attachment {
+          width: 100%;
+          padding: 0 0.5em;
+          text-align: center; 
+        }
+      }
+    }
+  }
 }
