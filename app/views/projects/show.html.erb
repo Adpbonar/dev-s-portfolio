@@ -13,20 +13,20 @@
     </p>
   <% end %>
   <br />
-  <div class="project">
-    <%= image_tag @project.project_image, class: 'image' %>
-    <% if @project.coming_soon %>
+  <% if @project.coming_soon %>
+    <div class="project">
+      <%= image_tag @project.project_image, class: 'image' %>
       <p class="coming-soon">COMING SOON</p>
-    <% end %>
-  </div>
-  <br />
+    </div>
+      <br />
+  <% end %>
+  <h2 class="text-center">
+    <strong>Project Information</strong>
+  </h2>
    <p>
     <span class="badge badge-secondary"><u>Versions</u>: <%= @project.versions %></span>
   </p>
-
-  <p>
-    <strong>Project Information:</strong>
-  </p>
+  <br />
     <div class="wrapper">
     <%= @project.project_info %>
     </div>
