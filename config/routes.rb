@@ -1,3 +1,5 @@
+match "*path" => redirect("https://www.devanpotterbonar.com/%{path}"), :constraints => { :protocol => "http://" }
+match "*path" => redirect("https://www.devanpotterbonar.com/%{path}"), :constraints => { :subdomain => "" }
 Rails.application.routes.draw do
   resources :articlesend
   resources :index_documents, only: [:index, :edit, :update]
