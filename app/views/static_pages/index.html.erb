@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </header>
 
 <body  data-turbolinks="false">
@@ -170,24 +171,20 @@
               <% end %>
             </div>
           <% end %>
-          <br class="clear" />
       </div>
   </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-    <script>
-      $(function () {
-        $(".first-click").click(function () {
-          $(this).text(function (i, text) {
-            return text === "Less" ? "More" : "Less";
-          })
-        });
+</div>
+<br />
+<br />
+<br />
+<br />
+          
+<script>
+  $(function () {
+    $(".first-click").click(function () {
+      $(this).text(function (i, text) {
+        return text === "Less" ? "More" : "Less";
       })
-  </script>
+    });
+  })
+</script>

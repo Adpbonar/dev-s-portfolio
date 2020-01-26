@@ -25,11 +25,10 @@
       </div>
       <div class="col-sm-6">
         <p class="contact-info">Have a look at my resume:</p>
-        <p class="resume">Feel free to</p>
-        <center><%= link_to "download".upcase, @about_document.resume_link, :target => "_blank", class: 'cvbtn' %>
-        </center>
+        <p class="resume">Feel free to open it as a </p>
+        <center><a target="_blank" href="<%= @about_document.resume_link %>"><i class="far fa-file-pdf fa-3x"></i></a></center>
         </p>
-        <p class="resume">a copy or<br /></p>
+        <p class="resume">or<br /></p>
         <center><a class="cvbtn" target="_blank"
             href="https://docs.google.com/document/d/1yvdBYVWZEraHJ8iOEsdG3Iz2ENDVXKI5SKhYWL7vxxo/edit?usp=sharing">VIEW
             IT</a></center>

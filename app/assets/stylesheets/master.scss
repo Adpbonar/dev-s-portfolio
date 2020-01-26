@@ -1,9 +1,17 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background: image_url('lubo-minar-t4DhcQddCnA-unsplash.jpg') center;
   font-family: 'PT Sans', sans-serif;
   margin: 0 !important;
   width: 100% !important;
   overflow-x: hidden !important;
+}
+
+.fa-file-pdf {
+  color: navy;
 }
 
 .box h4 {
