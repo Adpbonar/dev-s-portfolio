@@ -76,109 +76,109 @@
       </center>
     </div>
   </div>
-  <div>
+  <br />
+  <div class="page-content">
+    <h3 id="code-samples" class="index-heder">Code Snippets</h3>
     <br />
-    <div class="page-content">
-      <h3 id="code-samples" class="index-heder">Code Snippets</h3>
-      <br />
-      <div class="row">
-        <% @code_samples.each do |code_sample| %>
-            <% if code_sample.featured %>
-              <div class="col-sm-5 box">
-                <div class="featured-project text-center"><h4><%= code_sample.title %></h4></div>
-                <%= code_sample.code.html_safe %>
-                <p class="text-left"><%= code_sample.description %></p>
-                <div class="featured-project text-center"><%= link_to 'details'.upcase, code_sample_path(code_sample), class: 'more' %></div>
-              </div
-            <% end %>  
-            <br class="clear"> 
-            <% code_sample.reload %>     
+    <div class="row">
+      <% @code_samples.each do |code_sample| %>
+        <% if code_sample.featured %>
+          <div class="col-sm-5 box">
+            <div class="featured-project text-center"><h4><%= code_sample.title %></h4></div>
+            <%= code_sample.code.html_safe %>
+            <p class="text-left"><%= code_sample.description %></p>
+            <div class="featured-project text-center"><%= link_to 'details'.upcase, code_sample_path(code_sample), class: 'more' %></div>
+          </div>
         <% end %>  
+        <br class="clear"> 
+        <% code_sample.reload %>     
+      <% end %>  
+    </div>
+    <br />
+    <br />
+    <br class="clear" />
+    <br class="clear" />
+    <center><p class="more"><%= link_to' See all code', code_samples_path %></p></center>
+    <br class="clear" /><br />
+    <h3 id="web-apps" class="index-heder">Web Apps</h3>
+    <br />
+    <div class="row">
+      <% @projects.each do |project| %>
+        <% if project.featured %>
+          <div class="col-sm-5 box">
+            <div class="featured-project text-center"><h4><%= project.title %></h4></div>
+              <%= image_tag project.project_image, class: 'project-index-image' %>
+              <% if project.coming_soon %>
+                <p class="coming-soon">COMING SOON</p>
+              <% end %>
+              <p class="text-left"><%= project.description %></p>
+              <div class="featured-project text-center"><%= link_to 'details'.upcase, project_path(project), class: 'more' %></div>
+            </div
+          <% end %>  
+          <br class="clear">      
+      <% end %>
+    
+    </div>
+    <br />
+    <br />
+    <center><p class="more"><%= link_to 'See all projects?', projects_path %></p></center>
+    <br class="clear" /><br />
+  </div>
+  <section class="skills-footer">
+    <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
+    <div>
+      <br />
+      <p class="s-t">
+        Devan has developed proficiency and expertise
+        in the following programming languages and
+        comfort with the following tools:
+      </p>
+      <div class="icons">
+        <%= image_tag 'github.png', alt: "GitHub" %>
+        <%= image_tag 'trello.png', alt: "Trello" %>
+        <%= image_tag 'slack.png', alt: "Slack" %>
+        <br class="clear" />
+        <%= image_tag 'skills.png', alt: "Skills: HTML/CSS, Ruby, Rails, Algorithms, Javascript", class: 'icon' %>
       </div>
-      <br />
-      <br />
-      <br class="clear" />
-      <br class="clear" />
-      <center><p class="more"><%= link_to' See all code', code_samples_path %></p></center>
-      <br class="clear" /><br />
-      <h3 id="web-apps" class="index-heder">Web Apps</h3>
-      <br />
-      <div class="row">
-        <% @projects.each do |project| %>
-          <% if project.featured %>
-            <div class="col-sm-5 box">
-              <div class="featured-project text-center"><h4><%= project.title %></h4></div>
-                <%= image_tag project.project_image, class: 'project-index-image' %>
-                <% if project.coming_soon %>
-                  <p class="coming-soon">COMING SOON</p>
-                <% end %>
-                <p class="text-left"><%= project.description %></p>
-                <div class="featured-project text-center"><%= link_to 'details'.upcase, project_path(project), class: 'more' %></div>
-              </div
-            <% end %>  
-            <br class="clear">      
-        <% end %>
-      
-      </div>
-      <br />
-      <br />
-      <center><p class="more"><%= link_to 'See all projects?', projects_path %></p></center>
-      <br class="clear" /><br />
-      <h3 id="skills-and-tools" class="index-heder">Skills &amp; Tools</h3>
-      <div>
+      <div class="blog-box">
+        <h1 class="text-center">Read About My Code</h1>
         <br />
-        <p class="s-t">
-          Devan has developed proficiency and expertise
-          in the following programming languages and
-          comfort with the following tools:
-        </p>
-        <div class="icons">
-          <%= image_tag 'github.png', alt: "GitHub" %>
-          <%= image_tag 'trello.png', alt: "Trello" %>
-          <%= image_tag 'slack.png', alt: "Slack" %>
-
-
-          <br class="clear" />
-          <%= image_tag 'skills.png', alt: "Skills: HTML/CSS, Ruby, Rails, Algorithms, Javascript", class: 'icon' %>
-        </div>
-        <div class="blog-box">
-          <h1 class="text-center">Read About My Code</h1>
-          <br />
-          <% @articles.each do |article| %>
-            <div class="well well-lg">
-              <% if article.featured %>
-                <% if article.published || current_user && current_user == article.user %>
-                  <% article.article_post_scheduled %>
-                    <% if ! article.published %>
-                      <div class="draft-border">
-                        <h4 class="draft">DRAFT</h4>
-                        <div class="blog-title text-center">
+        <% @articles.each do |article| %>
+          <div class="well">
+            <% if article.featured %>
+              <% if article.published || current_user && current_user == article.user %>
+                <% article.article_post_scheduled %>
+                <% if ! article.published %>
+                    <div class="draft-border">
+                      <h4 class="draft">DRAFT</h4>
+                      <div class="blog-title text-center">
+                        <%= link_to article.title, article_path(article) %><br />
+                        <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
+                      </div>
+                    </div>
+                    <br class="clear" />
+                  <% else %>
+                    <div class="blog-title text-center">
+                      <center>
+                        <div class="blog-card article-card">
                           <%= link_to article.title, article_path(article) %><br />
                           <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
                         </div>
-                      </div>
-                      <br class="clear" />
-                    <% else %>
-                      <div class="blog-title text-center">
-                        <center><div class="card bg-light text-dark">
-                          <%= link_to article.title, article_path(article) %>
-                        <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
-                      </div></center>
-                      </div>
-                      <br class="clear" />
+                      </center>
+                    </div>
+                    <br class="clear" />
                   <% end %>
                 <% end %>
               <% end %>
             </div>
           <% end %>
-      </div>
-  </div>
-</div>
-<br />
-<br />
-<br />
-<br />
-          
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
 <script>
   $(function () {
     $(".first-click").click(function () {
