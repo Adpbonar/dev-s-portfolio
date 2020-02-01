@@ -4,7 +4,7 @@ class CodeSamplesController < ApplicationController
   # GET /code_samples
   # GET /code_samples.json
   def index
-    @code_samples = CodeSample.all
+    @code_samples = CodeSample.all.order([:id]).reverse_order
   end
 
   # GET /code_samples/1

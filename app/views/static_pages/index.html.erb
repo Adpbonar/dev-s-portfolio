@@ -162,8 +162,10 @@
                       <br class="clear" />
                     <% else %>
                       <div class="blog-title text-center">
-                        <%= link_to article.title, article_path(article) %><br />
+                        <center><div class="card bg-light text-dark">
+                          <%= link_to article.title, article_path(article) %>
                         <small>(Posted: <%= article.scheduled_for.strftime("%B %d, %Y") %>)</small>
+                      </div></center>
                       </div>
                       <br class="clear" />
                   <% end %>
