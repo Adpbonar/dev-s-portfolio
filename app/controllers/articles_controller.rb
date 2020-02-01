@@ -11,7 +11,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = current_user.articles.create(article_params)
+    @article = Article.create(article_params)
+    @article.user_id = current_user.id
     if @article.save
       if @article.article_posted == true
         flash[:notice] = "Article was successfully published"
