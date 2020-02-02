@@ -3,7 +3,12 @@ class CommentsController < ApplicationController
   def create
     @article = Article.friendly.find(params[:article_id])
     @comment = @article.comments.create(comment_params)
-    redirect_to article_path(@article)
+    if @comment.save
+      redirect_to article_path(@article)
+    else
+      redirect_to article_path(@article)
+      flash[:alert] = 'Your comment did not save. Please fill out the entire form.'
+    end
   end
 
   def destroy 
