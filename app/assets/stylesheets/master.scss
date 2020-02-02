@@ -1059,7 +1059,45 @@ a:focus {
 
   h4 {
     margin-bottom: 10px;
+}
 
+.comments {
+  table,  table a {
+    color: white;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  table a:hover, a:hover {
+    color: red;
+  }
+
+  tr.space>td {
+    padding: 1em;
+  }
+
+  td {
+    padding: 10px;
+    border-radius: 2px;
+  }
+
+  tr:nth-child(even) td {
+    background: rgb(55, 22, 204);
+  }
+
+  tr:nth-child(odd) td {
+    background: rgb(31, 134, 31);
+  }
+}
+
+.white-background-date {
+  background: white;
+  padding: 2px;
+  width: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
 }
 
 .blog-box {
