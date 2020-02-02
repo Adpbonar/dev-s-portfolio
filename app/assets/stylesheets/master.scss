@@ -1090,6 +1090,17 @@ a:focus {
   }
 }
 
+.td-right {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.td-left {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+
 .white-background-date {
   background: white;
   padding: 2px;
