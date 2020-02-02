@@ -5,17 +5,29 @@
 <div class="page-content">
   <br />
   <% if @article.published || current_user && current_user == @article.user %>
-  <% unless @article.published %>
+    <% unless @article.published %>
       <h2 class="draft">DRAFT</h2>
     <% end %>
     <h2 class="post-title"><%= @article.title %></h2>
     <div class="well col-xs-8 col-xs-offset-2">
-    <br />
-    <center><p class="date-text"><%= @article.scheduled_for.strftime("%B %d, %Y").upcase %></center>
-    <hr>
-    <div class="post"><%= @article.post %></div>
-    <br />
-    <hr>
+      <br />
+      <center>
+        <p class="date-text"><%= @article.scheduled_for.strftime("%B %d, %Y").upcase %>
+      </center>
+      <hr>
+      <div class="post"><%= @article.post %></div>
+      <br />
+      <% if current_user && current_user == @article.user %>
+        <%= link_to "Edit Article", edit_article_path(@article) %> |
+        <%= link_to 'Back', articles_path %> |
+        <%= link_to "Delete Article", article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?"} %>
+        <br />
+        <br />
+        <br />
+      <% end %>
+    </div>
+  </div>
+  <div class="page-content text-center">
     <h2>Comments</h2>
     <p style="display: inline;">This article has <%= @article.comments.count %> comments. </p> <button
       style="display: inline;" type="button" class="btn btn-primary btn-sm" data-toggle="modal"
@@ -40,27 +52,18 @@
                 </p>
               </td>
               <td style="width: 2%;" class="td-left">
-               <%= link_to [comment.article, comment], method: :delete, data: { confirm: "Are you sure you want to delete this comment?"}  do %>
-                <i class="fa fa-trash" aria-hidden="true"></i>
-              <% end %>
+                <%= link_to [comment.article, comment], method: :delete, data: { confirm: "Are you sure you want to delete this comment?"}  do %>
+                  q<i class="fa fa-trash" aria-hidden="true"></i>
+                <% end %>
               </td>
             </tr>
           <% end %>
         </tbody>
       </table>
     </div>
-   
-    <% if current_user && current_user == @article.user %>
-      <%= link_to "Edit Article", edit_article_path(@article) %> |
-      <%= link_to 'Back', articles_path %> | 
-      <%= link_to "Delete Article", article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?"} %>
-      <br />
-      <br />
-      <br />
-    <% end %>
-    </div>
-  <% end %>
-  <br class="clear" />
+  </div>
+<% end %>
+<br class="clear" />
 </div>
 <br />
 <br />
@@ -81,20 +84,19 @@
       </div>
       <div class="modal-body">
 
-    <%= simple_form_for([@article, @article.comments.build]) do |f| %>
+        <%= simple_form_for([@article, @article.comments.build]) do |f| %>
 
-    <p> 
-      <%= f.input :commenter, label: 'Comment as:' %> 
-   
-      <%= f.input :body, label: 'What would you like to say?' %>
-    </p>
+        <p>
+          <%= f.input :commenter, label: 'Comment as:' %>
 
-        </div>
-        <div class="modal-footer">
-          <%= f.button :submit, class: 'btn btn-success' %>
+          <%= f.input :body, label: 'What would you like to say?' %>
+        </p>
+
+      </div>
+      <div class="modal-footer">
+        <%= f.button :submit, class: 'btn btn-success' %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
