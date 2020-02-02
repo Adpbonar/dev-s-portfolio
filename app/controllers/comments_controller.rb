@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
     if user_signed_in?
       @comment.destroy
       redirect_to article_path(@article)
+      flash[:notice] = 'Comment was successfully deleted.'
     else
       redirect_to article_path(@article)
       flash[:alert] = 'You need to be logged in to complete this action.'
