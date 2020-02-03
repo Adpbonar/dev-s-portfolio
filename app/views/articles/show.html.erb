@@ -42,7 +42,7 @@
             <tr class="space">
               <td class="td-right">
                 <p>
-                  <strong><%= comment.commenter %> wrote:</strong>
+                  <strong><%= comment.commenter.upcase %> wrote:</strong>
                 </p>
                 <p class="text-left">
                   <strong><%= comment.body %></strong>
@@ -81,13 +81,22 @@
       <div class="modal-body">
 
         <%= simple_form_for([@article, @article.comments.build]) do |f| %>
+        <% if user_signed_in? %>
+           <% name = current_user.email.split('@').first %>
+          <p>
+            <%= f.input :commenter, disabled: true, placeholder: name, label: 'Comment as:' %>
 
-        <p>
-          <%= f.input :commenter, label: 'Comment as:' %>
+            <%= f.input :commenter, as: :hidden, :input_html => { :value => name } %>
 
-          <%= f.input :body, label: 'What would you like to say?' %>
-        </p>
+            <%= f.input :body, label: 'What would you like to say?' %>
+          </p>
+        <% else %>
+          <p>
+            <%= f.input :commenter, label: 'Comment as:' %>
 
+            <%= f.input :body, label: 'What would you like to say?' %>
+          </p>
+        <% end %>
       </div>
       <div class="modal-footer">
         <%= f.button :submit, class: 'btn btn-success' %>
