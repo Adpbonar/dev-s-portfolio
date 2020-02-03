@@ -84,7 +84,7 @@
         <% if user_signed_in? %>
            <% name = current_user.email.split('@').first %>
           <p>
-            <%= f.input :commenter, disabled: true, placeholder: name, label: 'Comment as:' %>
+            <%= f.input :commenter, disabled: true, placeholder: name.upcase, label: 'Comment as:' %>
 
             <%= f.input :commenter, as: :hidden, :input_html => { :value => name } %>
 
