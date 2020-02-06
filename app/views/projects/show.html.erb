@@ -1,6 +1,3 @@
-<% if notice.present? %>
-  <p id="notice"><%= notice %></p>
-<% end %>
 <br />
 <section class="page-content">
   <br />
@@ -8,9 +5,15 @@
     <%= @project.title %>
   </h1>
   <% if @project.GitHub_link.present? %>
-    <p class="git-link text-center">
-      <strong>View project on  <a target="_blank" href="<%= @project.GitHub_link %>"><i class="fab fa-github"></i></a></strong>
-    </p>
+     <% if @project.not_public == false %>
+      <p class="git-link text-center">
+        <strong>View project on  <a target="_blank" href="<%= @project.GitHub_link %>"><i class="fab fa-github"></i></a></strong>
+      </p>
+    <% else %>
+      <p class="notice git-link text-center">
+        <strong>Unfortunately, this repo is not public due to the presence of proprietary client information.</strong>
+      </p>
+    <% end %>
   <% end %>
   <br />
   <% if @project.coming_soon %>

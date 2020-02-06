@@ -1035,6 +1035,14 @@ a:focus {
   margin-left: auto;
 }
 
+.notice {
+  background: rgb(5, 161, 5) !important;
+  border-radius: 2px;
+  margin: 1.5em;
+  color: white;
+  padding: 10px;
+}
+
 .bio-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
