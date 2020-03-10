@@ -1,7 +1,6 @@
 class User < ApplicationRecord
 
   validates :password_complexity
-  validate :password_complexity
 
   has_many :articles
   has_many :projects
