@@ -4,7 +4,9 @@
   <p class="text-center">Current Image</p>
 
   <div class="preview text-center">
-    <%= image_tag @about_document.image %>
+    <% if @about_document.image.present? %>
+      <%= image_tag @about_document.image %>
+    <% end %>
   </div>
   <br />
   <%= render 'form', about_document: @about_document %>
